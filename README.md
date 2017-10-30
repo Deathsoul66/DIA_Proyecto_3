@@ -2,7 +2,7 @@
 
 Un departamento universitario necesita llevar la cuenta de la producción científica de sus miembros. Para ello necesita una aplicación con los siguientes módulos:
 
-Gestión de miembros del departamento (altas, bajas, modificaciones), salvaguarda y recuperación.
+Gestión de miembros del departamento (altas, bajas, modificaciones), salvaguarda y recuperación. (L. Gerardo R. G.)
 
   - DNI  
   - Nombre  
@@ -34,3 +34,7 @@ Búsquedas
     - Miembro del departamento: Mostrará todos los méritos aplicaples para el miembro.
     - Anual: Mostrará el número de méritos de todo el departamento, por año.
     - Tipo de publicación: Mostrará los méritos aplicables según el tipo: artículo, comunicación, libro.
+
+# Especificaciones Proyecto 
+- Diseño de la interfaz: GTK
+
