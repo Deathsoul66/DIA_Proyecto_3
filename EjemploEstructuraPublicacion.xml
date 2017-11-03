@@ -10,10 +10,7 @@
       <Autor>El papaito sabrosongo</Autor>
       <Autor>Señor iglesias</Autor>
     </Autores>
-    
   </Libro>
-
-
 
   <Articulo DOI="453JHASGJHSADGASDG21">
     <Titulo>La vida y la muerte de jose papito</Titulo>
@@ -25,9 +22,7 @@
       <Autor>El papaito sabrosongo</Autor>
       <Autor>Señor iglesias</Autor>
     </Autores>
-
   </Articulo>
-
 
   <Congreso DOI="453JHASGJHSADGASDG21">
     <Titulo>La vida y la muerte de jose papito</Titulo>
@@ -42,6 +37,5 @@
     <Nombre>ka</Nombre>
     <Ciudad>URSS</Ciudad>
     <Fecha>35/25/2301</Fecha>
-
   </Congreso>
 </Publicaciones>
