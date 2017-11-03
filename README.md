@@ -4,24 +4,24 @@ Un departamento universitario necesita llevar la cuenta de la producción cient�
 
 Gestión de miembros del departamento (altas, bajas, modificaciones), salvaguarda y recuperación. (L. Gerardo R. G.)
 
-  - DNI  
-  - Nombre  
-  - Teléfono  
-  - Email  
-  - Dirección postal  
+  - DNI  -> string
+  - Nombre -> string  
+  - Teléfono -> int 
+  - Email -> string
+  - Dirección postal -> int 
   
   
 Gestión de méritos científicos (altas, bajas, modificaciones), salvaguarda y recuperación. Pueden ser: libros, artículos o comunicación   (en congreso). (Victor e Imanol Cobian)
 
-  - Código DOI o autoasignado si no está disponible el DOI  
-  - Título  
-  - Editorial  
-  - Nombre del Congreso (si es aplicable)  
-  - Ciudad de celebración del Congreso (si es aplicable)  
-  - Fechas de celebración del Congreso (si es aplicable)  
-  - Año de publicación  
-  - Página inicial y página final  
-  - Autor(es) (pueden ser miembros del departamento (al menos uno), o no).  
+  - Código DOI o autoasignado si no está disponible el DOI -> string 
+  - Título  -> string
+  - Editorial  -> string
+  - Nombre del Congreso (si es aplicable) -> string  
+  - Ciudad de celebración del Congreso (si es aplicable) -> string  
+  - Fechas de celebración del Congreso (si es aplicable)  -> date
+  - Año de publicación  -> date
+  - Página inicial y página final -> int 
+  - Autor(es) (pueden ser miembros del departamento (al menos uno), o no). -> string  
   
   
 Informes de producción científica. (Nelson Araujo)
@@ -37,5 +37,7 @@ Búsquedas. (Marco Aurelio)
 
 # Especificaciones Proyecto 
 - Diseño de la interfaz: GTK
-
+- Diseño Clases:
+	- Una clase base con los atributos (Miembros, Publicaciones)
+	- Una clase para las fuciones Añadir, Eliminar, Modificar, Guardar y Recuperar (ListaMiembros, ListaPublicaciones)
 
