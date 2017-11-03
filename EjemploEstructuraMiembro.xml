@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Miembros>
+  <Miembro DNI="12345678">
+    <Nombre>Nombre</Nombre>
+    <Apellidos>Apellidos</Apellidos>
+    <Telefono>123778496</Telefono>
+    <Email>lrgarcia@esei.uvigo</Email>
+    <Direccion>patata</Direccion>
+  </Miembro>
+</Miembros>
