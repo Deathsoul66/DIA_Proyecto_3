@@ -14,7 +14,7 @@ namespace Proy_Nelson
 			SetIconFromFile("icon.png");
 			//SYSTEM EVENTS
 			DeleteEvent += OnDelete;
-			//VERTICAL BOXs>
+			//VERTICAL BOXs
 			Box vbox = new VBox(false, 2);
 			//ELEMENTS
 			// = MENU =
@@ -31,28 +31,27 @@ namespace Proy_Nelson
 			barraMenu.Append(about);
 			barraMenu.Append(salir);
 
-			//AÑADIR A BOX VERTICAL (MainView)
+			//ADD TO VERTICAL BOX
 			vbox.PackStart(barraMenu, false, false, 0); //MENU
 
-			//VISUALIZAR
-			// - AÑADIR PARA MOSTRAR -
+			//ADD TO SHOW
 			Add(vbox);
 
-			//MOSTRAR TODOS
-			ShowAll(); //Muestra todos en la ventana
+			//SHOW
+			ShowAll();
 
-			//EVENTOS
+			//EVENTS
 			about.ButtonPressEvent += OnMenuAboutActivated;
 			salir.ButtonPressEvent += OnMenuSalirActivated;
 
-
 		}
+
 		void OnDelete(object obj, DeleteEventArgs args) { Application.Quit(); }
+
 		void OnMenuSalirActivated(object sender, EventArgs e)
 		{
 			this.Destroy();
-			Application.Quit();
-		}
+			Application.Quit();		}
 
 		void OnMenuAboutActivated(object sender, EventArgs e)
 		{

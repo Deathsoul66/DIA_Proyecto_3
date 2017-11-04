@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proy_Marco", "Proy_Marco\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proy_ImaTor", "Proy_ImaTor\Proy_ImaTor.csproj", "{47A0FA19-9061-4F19-829E-F5B0F53E1607}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proy_Luis", "Proy_Luis\Proy_Luis.csproj", "{3EE5D519-356E-4BE5-9F34-D69084384F4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -25,5 +27,9 @@ Global
 		{47A0FA19-9061-4F19-829E-F5B0F53E1607}.Debug|x86.Build.0 = Debug|x86
 		{47A0FA19-9061-4F19-829E-F5B0F53E1607}.Release|x86.ActiveCfg = Release|x86
 		{47A0FA19-9061-4F19-829E-F5B0F53E1607}.Release|x86.Build.0 = Release|x86
+		{3EE5D519-356E-4BE5-9F34-D69084384F4E}.Debug|x86.ActiveCfg = Debug|x86
+		{3EE5D519-356E-4BE5-9F34-D69084384F4E}.Debug|x86.Build.0 = Debug|x86
+		{3EE5D519-356E-4BE5-9F34-D69084384F4E}.Release|x86.ActiveCfg = Release|x86
+		{3EE5D519-356E-4BE5-9F34-D69084384F4E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
