@@ -4,11 +4,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_ImaTor\Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProyectoDia Status">
     <Files>
-      <File FileName="Proy_Nelson\Program.cs" Line="1" Column="1" />
+      <File FileName="Proy_Nelson\Program.cs" Line="13" Column="1" />
       <File FileName="Proy_Marco\Program.cs" Line="1" Column="1" />
       <File FileName="Proy_ImaTor\Program.cs" Line="1" Column="1" />
+      <File FileName="ProyectoDia Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
