@@ -1,4 +1,5 @@
 ﻿using System;
+using Gtk;
 
 namespace Proy_Nelson
 {
@@ -6,7 +7,13 @@ namespace Proy_Nelson
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello Puatin!");
+			Application.Init();
+			ViewInformes Grafi = new ViewInformes();
+			Application.Run();
+
+			return;
+
+			return;
 		}
 	}
 }
