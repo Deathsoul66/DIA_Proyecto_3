@@ -1,4 +1,5 @@
 using Gtk;
+using System;
 
 namespace Proy_Nelson
 {
@@ -40,7 +41,39 @@ namespace Proy_Nelson
 			//MOSTRAR TODOS
 			ShowAll(); //Muestra todos en la ventana
 
+			//EVENTOS
+			about.ButtonPressEvent += OnMenuAboutActivated;
+			salir.ButtonPressEvent += OnMenuSalirActivated;
+
+
 		}
 		void OnDelete(object obj, DeleteEventArgs args) { Application.Quit(); }
+		void OnMenuSalirActivated(object sender, EventArgs e)
+		{
+			this.Destroy();
+			Application.Quit();
+		}
+
+		void OnMenuAboutActivated(object sender, EventArgs e)
+		{
+			AboutDialog about = new AboutDialog();
+			about.SetIconFromFile("icon.png");
+			about.ProgramName = "Informer";
+			about.Version = "0.0.1";
+			about.Copyright = "(c) Nelson Martinez";
+			about.Comments = @"Informer is a simple solution proyect for DIA @ ESEI";
+			about.Website = "informer.fake.web";
+			try
+			{
+				//DRM FREE image found @ https://pixabay.com/es/portapapeles-de-papel-clip-negocio-2899533/
+				about.Logo = new Gdk.Pixbuf("about.png", 200, 300);
+			}
+			catch
+			{
+				throw new Exception("Imagen 'about.png' no encontrada");
+			}
+			about.Run();
+			about.Destroy();
+		}
 	}
 }
