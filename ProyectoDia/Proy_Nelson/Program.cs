@@ -6,7 +6,7 @@ namespace Proy_Nelson
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello Putin!");
+			Console.WriteLine("Hello Puatin!");
 		}
 	}
 }
