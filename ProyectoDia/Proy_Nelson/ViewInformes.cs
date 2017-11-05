@@ -43,7 +43,6 @@ namespace Proy_Nelson
 			//EVENTS
 			about.ButtonPressEvent += OnMenuAboutActivated;
 			salir.ButtonPressEvent += OnMenuSalirActivated;
-
 		}
 
 		void OnDelete(object obj, DeleteEventArgs args) { Application.Quit(); }
