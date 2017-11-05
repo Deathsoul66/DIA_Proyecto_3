@@ -4,9 +4,13 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Nelson\ViewInformes.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Nelson\XmlReader.cs">
     <Files>
-      <File FileName="Proy_Nelson\ViewInformes.cs" Line="46" Column="4" />
+      <File FileName="Proy_Nelson\ViewInformes.cs" Line="45" Column="51" />
+      <File FileName="Proy_Nelson\Publicacion.cs" Line="17" Column="19" />
+      <File FileName="Proy_Nelson\TipoPublicacion.cs" Line="1" Column="1" />
+      <File FileName="Proy_Nelson\XmlReader.cs" Line="25" Column="40" />
+      <File FileName="Proy_Nelson\Libro.cs" Line="26" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />

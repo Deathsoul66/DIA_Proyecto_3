@@ -14,12 +14,13 @@ namespace Proy_Nelson
 		public Libro(string DOI, string titulo, string editorial, string anoPublicacion, string pagInicio, string pagFin, string[] autores)
 		{
 			this.DOI = DOI;
-            this.titulo = titulo;
-            this.editorial = editorial;
-            this.anoPublicacion = anoPublicacion;
-            this.pagInicio = pagInicio;
-            this.pagFin = pagFin;
-            this.autores = autores;
+			this.titulo = titulo;
+			this.editorial = editorial;
+			this.anoPublicacion = anoPublicacion;
+			this.pagInicio = pagInicio;
+			this.pagFin = pagFin;
+			this.autores = autores;
 		}
 
 	}
+}
