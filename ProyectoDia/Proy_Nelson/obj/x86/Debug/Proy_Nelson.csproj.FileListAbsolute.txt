@@ -14,3 +14,4 @@ C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\obj\x86\Deb
 C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\obj\x86\Debug\Proy_Nelson.pdb
 C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\bin\Debug\icon.png
 C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\bin\Debug\about.png
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\bin\Debug\Mono.Posix.dll
