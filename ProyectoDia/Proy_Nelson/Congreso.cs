@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Proy_Nelson
 {
 	public class Congreso : Publicacion
@@ -12,9 +14,9 @@ namespace Proy_Nelson
 		private string nombre { get; set; }
 		private string ciudad { get; set; }
 		private string fecha { get; set; }
-		private string[] autores { get; set; }
+		private List<string> autores { get; set; }
 
-		public Congreso(string DOI, string titulo, string editorial, string anoPublicacion, string pagInicio, string pagFin, string[] autores, string nombre, string ciudad, string fecha)
+		public Congreso(string DOI, string titulo, string editorial, string anoPublicacion, string pagInicio, string pagFin, List<string> autores, string nombre, string ciudad, string fecha)
 		{
 			this.DOI = DOI;
 			this.titulo = titulo;

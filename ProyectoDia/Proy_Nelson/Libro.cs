@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Proy_Nelson
 {
 	public class Libro : Publicacion
@@ -9,9 +11,9 @@ namespace Proy_Nelson
 		private string anoPublicacion { get; set; }
 		private string pagInicio { get; set; }
 		private string pagFin { get; set; }
-		private string[] autores { get; set; }
+		private List<string> autores { get; set; }
 
-		public Libro(string DOI, string titulo, string editorial, string anoPublicacion, string pagInicio, string pagFin, string[] autores)
+		public Libro(string DOI, string titulo, string editorial, string anoPublicacion, string pagInicio, string pagFin, List<string> autores)
 		{
 			this.DOI = DOI;
 			this.titulo = titulo;
