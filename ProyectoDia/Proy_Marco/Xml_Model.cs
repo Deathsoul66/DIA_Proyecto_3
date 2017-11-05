@@ -66,73 +66,78 @@ namespace Proy_Marco
 			{
 				foreach (XmlNode publicacion in xmlDoc.DocumentElement.ChildNodes)
 				{
+					autores.Clear();
 					foreach (XmlNode n in publicacion.ChildNodes)
 					{
-						if (n.Name == "Articulo")
+						if (n.Name == "Articulo" || n.Name == "Congreso" || n.Name == "Libro")
 						{
 							tipo = n.Name;
-							id = n.Value;
+							id = n.Attributes["DOI"].InnerText;
 						}
-
-						if (n.Name == "Titulo")
+						foreach (XmlNode n1 in n.ChildNodes)
 						{
-							titulo = n.Name;
-							titulo = titulo.Trim();
-						}
-
-						if (n.Name == "Editorial")
-						{
-							editorial = n.InnerText;
-							editorial = editorial.Trim();
-						}
-
-						if (n.Name == "AnhoPublicacion")
-						{
-							anho = n.InnerText;
-							anho = anho.Trim();
-						}
-
-						if (n.Name == "PaginaIni")
-						{
-							inicio = n.InnerText;
-							inicio = inicio.Trim();
-						}
-
-						if (n.Name == "PaginaFin")
-						{
-							fin = n.InnerText;
-							fin = fin.Trim();
-						}
-
-						foreach (XmlNode n2 in n.ChildNodes)
-						{
-							if (n.Name == "Autor")
+							if (n1.Name == "Titulo")
 							{
-								autor = n.InnerText;
-								autor = autor.Trim();
+								titulo = n1.Name;
+								titulo = titulo.Trim();
 							}
 
-							autores.Add(autor);
-						}
+							if (n1.Name == "Editorial")
+							{
+								editorial = n1.InnerText;
+								editorial = editorial.Trim();
+							}
 
-						if (n.Name == "Nombre")
-						{
-							nombre = n.InnerText;
-							nombre = nombre.Trim();
-						}
+							if (n1.Name == "AnhoPublicacion")
+							{
+								anho = n1.InnerText;
+								anho = anho.Trim();
+							}
 
-						if (n.Name == "Ciudad")
-						{
-							ciudad = n.InnerText;
-							ciudad = ciudad.Trim();
-						}
+							if (n1.Name == "PaginaIni")
+							{
+								inicio = n1.InnerText;
+								inicio = inicio.Trim();
+							}
 
-						if (n.Name == "Fecha")
-						{
-							fecha = n.InnerText;
-							fecha = fecha.Trim();
-						}
+							if (n1.Name == "PaginaFin")
+							{
+								fin = n1.InnerText;
+								fin = fin.Trim();
+							}
 
+							if (n1.Name == "Autores")
+							{
+								foreach (XmlNode n2 in n1.ChildNodes)
+								{
+									if (n2.Name == "Autor")
+									{
+										autor = n2.InnerText;
+										autor = autor.Trim();
+									}
+
+									autores.Add(autor);
+								}
+							}
+
+							if (n1.Name == "Nombre")
+							{
+								nombre = n1.InnerText;
+								nombre = nombre.Trim();
+							}
+
+							if (n1.Name == "Ciudad")
+							{
+								ciudad = n1.InnerText;
+								ciudad = ciudad.Trim();
+							}
+
+							if (n1.Name == "Fecha")
+							{
+								fecha = n1.InnerText;
+								fecha = fecha.Trim();
+							}
+						}
 
 						Publicacion pub = new Publicacion();
 
@@ -149,6 +154,7 @@ namespace Proy_Marco
 						pub.Fecha = fecha;
 
 						toRet.addPublicacion(pub);
+
 					}
 				}
 			}
