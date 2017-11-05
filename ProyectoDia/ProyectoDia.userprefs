@@ -4,24 +4,11 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Nelson\XmlReader.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Nelson\Libro.cs">
     <Files>
-      <File FileName="Proy_Nelson\ViewInformes.cs" Line="45" Column="51" />
-      <File FileName="Proy_Nelson\Publicacion.cs" Line="17" Column="19" />
-      <File FileName="Proy_Nelson\TipoPublicacion.cs" Line="1" Column="1" />
-      <File FileName="Proy_Nelson\XmlReader.cs" Line="25" Column="40" />
-      <File FileName="Proy_Nelson\Libro.cs" Line="26" Column="2" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Marco\Xml_Model.cs">
-    <Files>
-      <File FileName="Proy_Marco\Program.cs" Line="12" Column="2" />
-      <File FileName="Proy_Marco\devolverPublicacion_Vista.cs" Line="1" Column="1" />
-      <File FileName="Proy_Marco\devolverPublicacion_Controller.cs" Line="1" Column="1" />
-      <File FileName="Proy_Marco\Publicacion.cs" Line="29" Column="28" />
-      <File FileName="Proy_Marco\listaPublicacion.cs" Line="30" Column="29" />
-      <File FileName="Proy_Marco\Xml_Model.cs" Line="198" Column="40" />
->>>>>>> 484999b19fcd80517bff049b953bc22d9a2f86d8
+      <File FileName="Proy_Nelson\XmlReader.cs" Line="16" Column="48" />
+      <File FileName="Proy_Marco\Xml_Model.cs" Line="103" Column="43" />
+      <File FileName="Proy_Nelson\Libro.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
