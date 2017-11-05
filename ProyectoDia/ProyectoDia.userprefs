@@ -1,16 +1,21 @@
-﻿<Properties StartupConfiguration="{90006D9B-09C8-49C0-863C-8490A8F36830}|Default">
+﻿<Properties StartupConfiguration="{D48F5170-A9BA-496E-9C2C-A34B6716B8E1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Nelson\Libro.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Marco\listaPublicacion.cs">
     <Files>
       <File FileName="Proy_Nelson\XmlReader.cs" Line="16" Column="48" />
-      <File FileName="Proy_Marco\Xml_Model.cs" Line="103" Column="43" />
-      <File FileName="Proy_Nelson\Libro.cs" Line="1" Column="1" />
+      <File FileName="Proy_Marco\Xml_Model.cs" Line="22" Column="33" />
+      <File FileName="Proy_Nelson\Libro.cs" Line="2" Column="22" />
+      <File FileName="Proy_Marco\Publicacion.cs" Line="11" Column="4" />
+      <File FileName="Proy_Marco\Program.cs" Line="14" Column="19" />
+      <File FileName="Proy_Marco\listaPublicacion.cs" Line="38" Column="5" />
+      <File FileName="Proy_Marco\Test.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Proy__Marco PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Proy__Nelson PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

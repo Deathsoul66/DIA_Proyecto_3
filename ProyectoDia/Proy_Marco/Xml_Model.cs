@@ -5,7 +5,7 @@ using System.Xml;
 using System.Xml.Linq;
 using Proy_Marco;
 
-namespace Practica2
+namespace Proy_Marco
 {
 	public class XMLreader
 	{
@@ -13,26 +13,26 @@ namespace Practica2
 		{
 		}
 
-		public static void devolverXMLLinqCongreso(String nombre = null, String anho = null, String tipo = null)
+		public static listaPublicacion devolverXMLLinqCongreso(String nombre = null, String anho = null, String tipo = null)
 		{
 			listaPublicacion pubList = new listaPublicacion();
-			XElement raiz = XElement.Load("publicacionXML.xml");
+			XElement raiz = XElement.Load("Test.xml");
 
-			var listaPub = from elem in raiz.Elements("Congreso")
-							select new Publicacion(
-				                                	Convert.ToString(elem.Name).Trim(),
-													Convert.ToString(elem.Attribute("DOI").Value).Trim(),
-													Convert.ToString(elem.Element("Titulo").Value).Trim(),
-													Convert.ToString(elem.Element("Editorial").Value).Trim(),
-													Convert.ToString(elem.Element("AnhoPublicacion").Value).Trim(),
-													Convert.ToString(elem.Element("PaginaIni").Value).Trim(),
-													Convert.ToString(elem.Element("PaginaFin").Value).Trim(),
-													null,
-													Convert.ToString(elem.Attribute("Nombre").Value).Trim(),
-													Convert.ToString(elem.Attribute("Ciudad").Value).Trim(),
-													Convert.ToString(elem.Attribute("Fecha").Value).Trim()
-												);
-			
+			var listaPub = from elem in raiz.Elements("Publicacion")
+						   select new Publicacion(
+												   Convert.ToString(elem.Name).Trim(),
+												   Convert.ToString(elem.Attribute("DOI").Value).Trim(),
+												   Convert.ToString(elem.Element("Titulo").Value).Trim(),
+												   Convert.ToString(elem.Element("Editorial").Value).Trim(),
+												   Convert.ToString(elem.Element("AnhoPublicacion").Value).Trim(),
+												   Convert.ToString(elem.Element("PaginaIni").Value).Trim(),
+												   Convert.ToString(elem.Element("PaginaFin").Value).Trim(),
+												   null,
+												   Convert.ToString(elem.Attribute("Nombre").Value).Trim(),
+												   Convert.ToString(elem.Attribute("Ciudad").Value).Trim(),
+												   Convert.ToString(elem.Attribute("Fecha").Value).Trim()
+											   );
+
 			List<Publicacion> lp = listaPub.ToList<Publicacion>();
 
 			foreach (Publicacion pub in listaPub)
@@ -40,6 +40,7 @@ namespace Practica2
 				pubList.addPublicacion(pub);
 			}
 
+			return pubList;
 		}
 
 		public static listaPublicacion devolverXML()
@@ -59,20 +60,23 @@ namespace Practica2
 			string fecha = "";
 			List<string> autores = new List<string>();
 
-			xmlDoc.Load("publicacionXml.xml");
+			xmlDoc.Load("Test.xml");
 
 			if (xmlDoc.DocumentElement.Name == "Publicaciones")
 			{
 				foreach (XmlNode publicacion in xmlDoc.DocumentElement.ChildNodes)
 				{
-					tipo = publicacion.Name;
-					id = publicacion.Value;
-
 					foreach (XmlNode n in publicacion.ChildNodes)
 					{
+						if (n.Name == "Articulo")
+						{
+							tipo = n.Name;
+							id = n.Value;
+						}
+
 						if (n.Name == "Titulo")
 						{
-							titulo = n.InnerText;
+							titulo = n.Name;
 							titulo = titulo.Trim();
 						}
 

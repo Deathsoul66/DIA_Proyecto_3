@@ -30,5 +30,13 @@ namespace Proy_Marco
 			return this.listPub.Count;
 		}
 
+		public override string ToString()
+		{
+			string toRet = "";
+			foreach(Publicacion pub in listPub){
+				toRet += pub.ToString() + "\n";
+			}
+			return toRet;
+		}
 	}
 }

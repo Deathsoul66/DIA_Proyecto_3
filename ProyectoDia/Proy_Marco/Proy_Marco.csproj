@@ -43,5 +43,10 @@
     <Compile Include="devolverPublicacion_Vista.cs" />
     <Compile Include="listaPublicacion.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Test.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

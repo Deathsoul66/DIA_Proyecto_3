@@ -65,5 +65,10 @@ namespace Proy_Marco
 			this.Fecha = fecha;
 		}
 
+		public override string ToString()
+		{
+			return string.Format("[Publicacion: Tipo={0}, Id={1}, Titulo={2}, Editorial={3}, AnhoPublicacion={4}, PaginaIni={5}, PaginaFin={6}, Autores={7}, Nombre={8}, Ciudad={9}, Fecha={10}]", Tipo, Id, Titulo, Editorial, AnhoPublicacion, PaginaIni, PaginaFin, Autores, Nombre, Ciudad, Fecha);
+		}
+
 	}
 }

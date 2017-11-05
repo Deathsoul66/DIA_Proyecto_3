@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Publicaciones>
+ <Publicacion>
+  <Libro DOI="453JHASGJHSADGASDG21">
+    <Titulo>La vida y la muerte de jose papito</Titulo>
+    <Editorial>JK.Patatas</Editorial>
+    <AnhoPublicacion>1987</AnhoPublicacion>
+    <PaginaIni>1</PaginaIni>
+    <PaginaFin>339</PaginaFin>
+    <Autores>
+      <Autor>El papaito sabrosongo</Autor>
+      <Autor>Señor iglesias</Autor>
+    </Autores>
+  </Libro>
+ </Publicacion>
+
+ <Publicacion>
+  <Articulo DOI="453JHASGJHSADGASDG21">
+    <Titulo>La vida y la muerte de jose papito</Titulo>
+    <Editorial>JK.Patatas</Editorial>
+    <AnhoPublicacion>1987</AnhoPublicacion>
+    <PaginaIni>1</PaginaIni>
+    <PaginaFin>339</PaginaFin>
+    <Autores>
+      <Autor>El papaito sabrosongo</Autor>
+      <Autor>Señor iglesias</Autor>
+    </Autores>
+  </Articulo>
+ </Publicacion>
+
+ <Publicacion>
+  <Congreso DOI="453JHASGJHSADGASDG21">
+    <Titulo>La vida y la muerte de jose papito</Titulo>
+    <Editorial>JK.Patatas</Editorial>
+    <AnhoPublicacion>1987</AnhoPublicacion>
+    <PaginaIni>1</PaginaIni>
+    <PaginaFin>339</PaginaFin>
+    <Autores>
+      <Autor>El papaito sabrosongo</Autor>
+      <Autor>Señor iglesias</Autor>
+    </Autores>
+    <Nombre>ka</Nombre>
+    <Ciudad>URSS</Ciudad>
+    <Fecha>35/25/2301</Fecha>
+  </Congreso>
+ </Publicacion>
+</Publicaciones>
