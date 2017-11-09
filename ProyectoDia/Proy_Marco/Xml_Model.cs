@@ -237,7 +237,12 @@ namespace Proy_Marco
 						pub.Fecha = fecha;
 
 						toRet.addPublicacion(pub);
-
+						String auts = "";
+						foreach (String a in autores)
+						{
+							auts += a + ", ";
+						}
+						Console.WriteLine(string.Format("[Publicacion: Tipo={0}, Id={1}, Titulo={2}, Editorial={3}, AnhoPublicacion={4}, PaginaIni={5}, PaginaFin={6}, Autores={7}, Nombre={8}, Ciudad={9}, Fecha={10}]", tipo, id, titulo, editorial, anho, inicio, fin, auts, nombre, ciudad, fecha));
 					}
 				}
 			}

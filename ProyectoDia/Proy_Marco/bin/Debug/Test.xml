@@ -15,32 +15,33 @@
  </Publicacion>
 
  <Publicacion>
-  <Articulo DOI="453JHASGJHSADGASDG21">
-    <Titulo>La vida y la muerte de jose papito</Titulo>
-    <Editorial>JK.Patatas</Editorial>
-    <AnhoPublicacion>1987</AnhoPublicacion>
-    <PaginaIni>1</PaginaIni>
-    <PaginaFin>339</PaginaFin>
+  <Articulo DOI="65976509786597633563">
+    <Titulo>Panchi, me has jodido el test</Titulo>
+    <Editorial>Frankie M.</Editorial>
+    <AnhoPublicacion>2017</AnhoPublicacion>
+    <PaginaIni>18</PaginaIni>
+    <PaginaFin>19</PaginaFin>
     <Autores>
-      <Autor>El papaito sabrosongo</Autor>
-      <Autor>Señor iglesias</Autor>
+      <Autor>Virgen santa</Autor>
+      <Autor>Putin</Autor>
+      <Autor>RASputin</Autor>
     </Autores>
   </Articulo>
  </Publicacion>
 
  <Publicacion>
-  <Congreso DOI="453JHASGJHSADGASDG21">
-    <Titulo>La vida y la muerte de jose papito</Titulo>
-    <Editorial>JK.Patatas</Editorial>
-    <AnhoPublicacion>1987</AnhoPublicacion>
-    <PaginaIni>1</PaginaIni>
-    <PaginaFin>339</PaginaFin>
+  <Congreso DOI="98765465849486519799">
+    <Titulo>La vida, un misterio. La muerte, suceso seguro.</Titulo>
+    <Editorial>Planeta</Editorial>
+    <AnhoPublicacion>2018</AnhoPublicacion>
+    <PaginaIni>182</PaginaIni>
+    <PaginaFin>200</PaginaFin>
     <Autores>
-      <Autor>El papaito sabrosongo</Autor>
-      <Autor>Señor iglesias</Autor>
+      <Autor>Primer autor</Autor>
+      <Autor>Otro autor</Autor>
     </Autores>
-    <Nombre>ka</Nombre>
-    <Ciudad>URSS</Ciudad>
+    <Nombre>Anonymous</Nombre>
+    <Ciudad>Dontknow</Ciudad>
     <Fecha>35/25/2301</Fecha>
   </Congreso>
  </Publicacion>

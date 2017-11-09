@@ -99,10 +99,35 @@ namespace Proy_Nelson
 			about.Destroy();
 		}
 
-		void OnMenuTestActivated(object sender, EventArgs e) {
+		void OnMenuTestActivated(object sender, EventArgs e)
+		{
 			this.publicaciones = XmlReader.read();
-			foreach (Publicacion p in publicaciones) {
-				Console.WriteLine(p);
+			foreach (Publicacion p in publicaciones)
+			{
+				Console.WriteLine("PUBLICACION => " + "DOI:" + p.DOI + "TITULO:" + p.Titulo + "EDITORIAL:" +
+								  p.Editorial + "Año pub:" + p.AnoPublicacion + "P.Inicio:" + p.PagInicio + "P.Fin:" + p.PagFin);
+				if (p is Articulo)
+				{
+					foreach (String a in ((Articulo)p).getAutores())
+					{
+						Console.WriteLine("Autor ARTICULO: " + a);
+					}
+
+				}
+				if (p is Libro)
+				{
+					foreach (String a in ((Libro)p).getAutores())
+					{
+						Console.WriteLine("Autor LIBRO: " + a);
+					}
+				}
+				if (p is Congreso)
+				{
+					foreach (String a in ((Congreso)p).getAutores())
+					{
+						Console.WriteLine("Autor CONGRESO: " + a);
+					}
+				}
 			}
 		}
 
@@ -168,8 +193,8 @@ namespace Proy_Nelson
 		ListStore CreateModel()
 		{
 			ListStore store = new ListStore(typeof(string), typeof(string), typeof(string), typeof(string),
-			                                typeof(string), typeof(string), typeof(string), typeof(string),
-			                                typeof(string), typeof(string), typeof(string));
+											typeof(string), typeof(string), typeof(string), typeof(string),
+											typeof(string), typeof(string), typeof(string));
 
 			foreach (Publicacion pub in this.publicaciones)
 			{
