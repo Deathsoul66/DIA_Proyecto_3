@@ -19,7 +19,7 @@ Gestión de méritos científicos (altas, bajas, modificaciones), salvaguarda y 
   - Nombre del Congreso (si es aplicable) -> string  
   - Ciudad de celebración del Congreso (si es aplicable) -> string  
   - Fechas de celebración del Congreso (si es aplicable)  -> date
-  - Año de publicación  -> date
+  - Año de publicación  -> int
   - Página inicial y página final -> int 
   - Autor(es) (pueden ser miembros del departamento (al menos uno), o no). -> string  
   
