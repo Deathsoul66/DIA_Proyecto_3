@@ -7,16 +7,16 @@ namespace Proy_ImaTor
     public class Publicacion
     {
         public virtual string Tipo{ get { return "Publicacion"; }}
-        string DOI {get; set;}
-        string Titulo{get; set;}
-		string Editorial { get; set; }
-		int AnhoPublicacion { get; set; }
-		int PaginaInicial { get; set; }
-		int PaginaFinal { get; set; }
+        public string DOI {get; set;}
+        public string Titulo{get; set;}
+		public string Editorial { get; set; }
+		public int AnhoPublicacion { get; set; }
+		public int PaginaInicial { get; set; }
+		public int PaginaFinal { get; set; }
         private List<string> ListaAutores = new List<string>();
-        List<string> Autores { get { return ListaAutores; } }
-		
+        public List<string> Autores { get { return ListaAutores; } }
 
+        public Publicacion(){}
         public Publicacion(string DOI, string Titulo ,string Editorial, int anhoPublicacion, int PaginaInicial, int PaginaFinal, params string[] Autores){
             this.DOI = DOI;
             this.Titulo = Titulo;
@@ -44,7 +44,15 @@ namespace Proy_ImaTor
 		}
 
         private string GenerarDOI(){
-            return null;
+            Random random = new Random();
+            string toret = "";
+			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            toret = new string (Enumerable.Repeat(chars, 2).Select(s => s[random.Next(s.Length)]).ToArray());
+            toret += ".";
+            toret += new string(Enumerable.Repeat(chars, 4).Select(s => s[random.Next(s.Length)]).ToArray());
+            toret += "/";
+            toret += new string(Enumerable.Repeat(chars, 3).Select(s => s[random.Next(s.Length)]).ToArray());
+            return toret;
         }
 
         public override string ToString()

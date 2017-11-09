@@ -4,9 +4,9 @@ namespace Proy_ImaTor
     public class Congreso: Publicacion
 	{
         public override string Tipo { get { return "Congreso"; } }
-		private string Nombre { get; set; }
-		private string Ciudad { get; set; }
-		private DateTime Fecha { get; set; }
+		public string Nombre { get; set; }
+		public string Ciudad { get; set; }
+		public DateTime Fecha { get; set; }
 
 		public Congreso(string DOI, string Titulo, string Editorial, int Anho, int PInicial, int PFinal,
                         string Nombre, string Ciudad, DateTime Fecha, params string[] Autores) : base(DOI, Titulo, Editorial, Anho,
