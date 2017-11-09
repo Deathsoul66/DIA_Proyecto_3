@@ -16,28 +16,28 @@
 
  <Publicacion>
   <Articulo DOI="453JHASGJHSADGASDG21">
-    <Titulo>La vida y la muerte de jose papito</Titulo>
-    <Editorial>JK.Patatas</Editorial>
-    <AnhoPublicacion>1987</AnhoPublicacion>
+    <Titulo>Ripper</Titulo>
+    <Editorial>JK</Editorial>
+    <AnhoPublicacion>1978</AnhoPublicacion>
     <PaginaIni>1</PaginaIni>
     <PaginaFin>339</PaginaFin>
     <Autores>
-      <Autor>El papaito sabrosongo</Autor>
-      <Autor>Señor iglesias</Autor>
+      <Autor>Johnny Smith</Autor>
+      <Autor>Jack Bauer</Autor>
     </Autores>
   </Articulo>
  </Publicacion>
 
  <Publicacion>
   <Congreso DOI="453JHASGJHSADGASDG21">
-    <Titulo>La vida y la muerte de jose papito</Titulo>
-    <Editorial>JK.Patatas</Editorial>
-    <AnhoPublicacion>1987</AnhoPublicacion>
+    <Titulo>Owens</Titulo>
+    <Editorial>Patatas</Editorial>
+    <AnhoPublicacion>1999</AnhoPublicacion>
     <PaginaIni>1</PaginaIni>
     <PaginaFin>339</PaginaFin>
     <Autores>
-      <Autor>El papaito sabrosongo</Autor>
-      <Autor>Señor iglesias</Autor>
+      <Autor>Anthony Crieg</Autor>
+      <Autor>Josa Parks</Autor>
     </Autores>
     <Nombre>ka</Nombre>
     <Ciudad>URSS</Ciudad>

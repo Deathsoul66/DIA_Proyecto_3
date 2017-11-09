@@ -9,6 +9,7 @@ namespace Proy_Marco
 			Console.WriteLine("Hello World!");
 			Console.WriteLine("Testing XML Reader");
 			listaPublicacion toRet = XMLreader.devolverXML();
+			toRet = XMLreader.filtrarLista(toRet);
 			//listaPublicacion toRet = XMLreader.devolverXMLLinqCongreso();
 			Console.WriteLine(toRet.ToString());
 			Console.Read();

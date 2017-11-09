@@ -48,7 +48,7 @@ namespace Proy_Marco
 		//	}
 		//}
 
-		public static listaPublicacion filtrarLista(listaPublicacion listaP, string nombre = "", string anho = "", string tipo = "")
+		public static listaPublicacion filtrarLista(listaPublicacion listaP, String nombre = "J", String anho = "", String tipo = "")
 		{
 			listaPublicacion toRet1 = listaP;
 			listaPublicacion toRet2 = new listaPublicacion();
@@ -61,16 +61,20 @@ namespace Proy_Marco
 			{
 				for (int i = 0; i < toRet1.getLength(); i++)
 				{
-
 					List<String> listaAut = toRet1.getPublicacion(i).Autores;
+					bool insert = false;
 
 					for (int j = 0; j < listaAut.Count(); j++)
 					{
-
-						if (listaAut[j] == nombre)
+						if (listaAut[j].Contains(nombre))
 						{
-							toRet2.addPublicacion(toRet1.getPublicacion(i));
+							insert = true;
 						}
+					}
+
+					if (insert == true) 
+					{ 
+						toRet2.addPublicacion(toRet1.getPublicacion(i));
 					}
 
 					listaAut = null;
@@ -88,7 +92,7 @@ namespace Proy_Marco
 			{
 				for (int i = 0; i < toRet2.getLength(); i++)
 				{
-					if (toRet2.getPublicacion(i).AnhoPublicacion == anho)
+					if (toRet2.getPublicacion(i).AnhoPublicacion.Contains(anho))
 					{
 						toRet3.addPublicacion(toRet2.getPublicacion(i));
 					}
@@ -107,7 +111,7 @@ namespace Proy_Marco
 			{
 				for (int i = 0; i < toRet3.getLength(); i++)
 				{
-					if (toRet3.getPublicacion(i).Tipo == tipo)
+					if (toRet3.getPublicacion(i).Tipo.Contains(tipo))
 					{
 						toRetFin.addPublicacion(toRet3.getPublicacion(i));
 					}
@@ -149,7 +153,7 @@ namespace Proy_Marco
 			{
 				foreach (XmlNode publicacion in xmlDoc.DocumentElement.ChildNodes)
 				{
-					autores.Clear();
+					autores = new List<string>();
 					foreach (XmlNode n in publicacion.ChildNodes)
 					{
 						if (n.Name == "Articulo" || n.Name == "Congreso" || n.Name == "Libro")
@@ -161,7 +165,7 @@ namespace Proy_Marco
 						{
 							if (n1.Name == "Titulo")
 							{
-								titulo = n1.Name;
+								titulo = n1.InnerText;
 								titulo = titulo.Trim();
 							}
 
@@ -237,10 +241,11 @@ namespace Proy_Marco
 						pub.Fecha = fecha;
 
 						toRet.addPublicacion(pub);
-
 					}
 				}
 			}
+
+			//Console.WriteLine(toRet.ToString());
 
 			return toRet;
 		}
