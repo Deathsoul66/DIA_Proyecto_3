@@ -16,3 +16,16 @@ C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.csprojResolveAssemblyReference.cache
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.exe
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.pdb
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gdk-sharp.dll
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glade-sharp.dll
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glib-sharp.dll
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gtk-dotnet.dll
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gtk-sharp.dll
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\atk-sharp.dll
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\pango-sharp.dll
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gtk-dotnet.pdb
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glib-sharp.pdb
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glade-sharp.pdb
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gdk-sharp.pdb
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\atk-sharp.pdb
+C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\pango-sharp.pdb

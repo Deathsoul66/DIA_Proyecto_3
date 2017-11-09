@@ -48,7 +48,7 @@ namespace Proy_Marco
 		//	}
 		//}
 
-		public static listaPublicacion filtrarLista(listaPublicacion listaP, String nombre = "J", String anho = "", String tipo = "")
+		public static listaPublicacion filtrarLista(listaPublicacion listaP, String nombre = "", String anho = "", String tipo = "")
 		{
 			listaPublicacion toRet1 = listaP;
 			listaPublicacion toRet2 = new listaPublicacion();
@@ -79,7 +79,6 @@ namespace Proy_Marco
 
 					listaAut = null;
 				}
-
 			}
 			else
 			{
@@ -96,9 +95,7 @@ namespace Proy_Marco
 					{
 						toRet3.addPublicacion(toRet2.getPublicacion(i));
 					}
-
 				}
-
 			}
 			else
 			{
@@ -115,9 +112,7 @@ namespace Proy_Marco
 					{
 						toRetFin.addPublicacion(toRet3.getPublicacion(i));
 					}
-
 				}
-
 			}
 			else
 			{
@@ -244,8 +239,6 @@ namespace Proy_Marco
 					}
 				}
 			}
-
-			//Console.WriteLine(toRet.ToString());
 
 			return toRet;
 		}
