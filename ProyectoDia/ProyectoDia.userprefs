@@ -1,19 +1,17 @@
-﻿<Properties StartupConfiguration="{90006D9B-09C8-49C0-863C-8490A8F36830}|Default">
+﻿<Properties StartupConfiguration="{47A0FA19-9061-4F19-829E-F5B0F53E1607}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_ImaTor/Publicacion.cs">
+    <Files>
+      <File FileName="Proy_ImaTor/Program.cs" Line="12" Column="34" />
+      <File FileName="Proy_ImaTor/Publicacion.cs" Line="8" Column="13" />
+      <File FileName="Proy_ImaTor/Libros.cs" Line="7" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Marco\Xml_Model.cs">
-    <Files>
-      <File FileName="Proy_Marco\Program.cs" Line="12" Column="2" />
-      <File FileName="Proy_Marco\devolverPublicacion_Vista.cs" Line="1" Column="1" />
-      <File FileName="Proy_Marco\devolverPublicacion_Controller.cs" Line="1" Column="1" />
-      <File FileName="Proy_Marco\Publicacion.cs" Line="6" Column="9" />
-      <File FileName="Proy_Marco\listaPublicacion.cs" Line="6" Column="9" />
-      <File FileName="Proy_Marco\Xml_Model.cs" Line="27" Column="52" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Proy__ImaTor PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Proy__Nelson PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
