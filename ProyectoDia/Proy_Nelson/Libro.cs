@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Proy_Nelson
@@ -10,7 +10,7 @@ namespace Proy_Nelson
 			base.DOI = DOI;
 			base.Titulo = titulo;
 			base.Editorial = editorial;
-			base.AnoPublicacion = anoPublicacion;
+			base.FechaPublicacion = anoPublicacion;
 			base.PagInicio = pagInicio;
 			base.PagFin = pagFin;
 			base.Autores = autores;
