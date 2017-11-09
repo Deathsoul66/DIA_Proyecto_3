@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Proy_Nelson
 {
 	public class Publicacion
 	{
-		public static Publicacion Create(TipoPublicacion tipo, string DOI, string titulo, string editorial, 
-		                                 string anoPublicacion, string pagInicio, string pagFin, string[] autores, 
-		                                 string nombre = null, string ciudad = null, string fecha = null)
+		public static Publicacion Create(TipoPublicacion tipo, string DOI, string titulo, string editorial,
+										 string anoPublicacion, string pagInicio, string pagFin, List<string> autores,
+										 string nombre = null, string ciudad = null, string fecha = null)
 		{
 			switch (tipo)
 			{
@@ -19,5 +21,6 @@ namespace Proy_Nelson
 					return null;
 			}
 		}
+
 	}
 }

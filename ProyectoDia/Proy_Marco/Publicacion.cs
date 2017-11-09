@@ -6,47 +6,58 @@ namespace Proy_Marco
 	public class Publicacion
 	{
 
-		public String Tipo {
+		public String Tipo
+		{
 			get; set;
 		}
 
-		public String Id {
+		public String Id
+		{
 			get; set;
 		}
 
-		public String Titulo{
+		public String Titulo
+		{
 			get; set;
 		}
 
-		public String Editorial {
+		public String Editorial
+		{
 			get; set;
 		}
 
-		public String AnhoPublicacion {
+		public String AnhoPublicacion
+		{
 			get; set;
 		}
 
-		public String PaginaIni {
+		public String PaginaIni
+		{
 			get; set;
 		}
 
-		public String PaginaFin {
+		public String PaginaFin
+		{
 			get; set;
 		}
 
-		public List<string> Autores {
+		public List<string> Autores
+		{
 			get; set;
 		}
 
-		public String Nombre {
+		public String Nombre
+		{
 			get; set;
 		}
 
-		public String Ciudad {
+		public String Ciudad
+		{
 			get; set;
 		}
 
-		public String Fecha {
+		public String Fecha
+		{
 			get; set;
 		}
 
@@ -63,6 +74,23 @@ namespace Proy_Marco
 			this.Nombre = nombre;
 			this.Ciudad = ciudad;
 			this.Fecha = fecha;
+		}
+
+		public override string ToString()
+		{
+			string autFormat = "";
+			for (int i = 0; i < Autores.Count; i++)
+			{
+				if (i != Autores.Count - 1)
+				{
+					autFormat += Autores[i] + ", ";
+				}
+				else { 
+					autFormat += Autores[i]; 
+				}
+			}
+
+			return string.Format("[Publicacion: Tipo={0}, Id={1}, Titulo={2}, Editorial={3}, AnhoPublicacion={4}, PaginaIni={5}, PaginaFin={6}, Autores={7}, Nombre={8}, Ciudad={9}, Fecha={10}]", Tipo, Id, Titulo, Editorial, AnhoPublicacion, PaginaIni, PaginaFin, autFormat, Nombre, Ciudad, Fecha);
 		}
 
 	}

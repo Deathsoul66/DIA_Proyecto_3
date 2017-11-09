@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Publicaciones>
+ <Publicacion>
   <Libro DOI="453JHASGJHSADGASDG21">
     <Titulo>La vida y la muerte de jose papito</Titulo>
     <Editorial>JK.Patatas</Editorial>
@@ -11,7 +12,9 @@
       <Autor>Señor iglesias</Autor>
     </Autores>
   </Libro>
+ </Publicacion>
 
+ <Publicacion>
   <Articulo DOI="453JHASGJHSADGASDG21">
     <Titulo>La vida y la muerte de jose papito</Titulo>
     <Editorial>JK.Patatas</Editorial>
@@ -23,7 +26,9 @@
       <Autor>Señor iglesias</Autor>
     </Autores>
   </Articulo>
+ </Publicacion>
 
+ <Publicacion>
   <Congreso DOI="453JHASGJHSADGASDG21">
     <Titulo>La vida y la muerte de jose papito</Titulo>
     <Editorial>JK.Patatas</Editorial>
@@ -38,4 +43,5 @@
     <Ciudad>URSS</Ciudad>
     <Fecha>35/25/2301</Fecha>
   </Congreso>
+ </Publicacion>
 </Publicaciones>
