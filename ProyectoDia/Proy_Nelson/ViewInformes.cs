@@ -108,7 +108,7 @@ namespace Proy_Nelson
 								  p.Editorial + "Año pub:" + p.AnoPublicacion + "P.Inicio:" + p.PagInicio + "P.Fin:" + p.PagFin);
 				if (p is Articulo)
 				{
-					foreach (String a in ((Articulo)p).getAutores())
+					foreach (String a in p.Autores)
 					{
 						Console.WriteLine("Autor ARTICULO: " + a);
 					}
@@ -116,17 +116,20 @@ namespace Proy_Nelson
 				}
 				if (p is Libro)
 				{
-					foreach (String a in ((Libro)p).getAutores())
+					foreach (String a in p.Autores)
 					{
 						Console.WriteLine("Autor LIBRO: " + a);
 					}
 				}
 				if (p is Congreso)
 				{
-					foreach (String a in ((Congreso)p).getAutores())
+					foreach (String a in p.Autores)
 					{
 						Console.WriteLine("Autor CONGRESO: " + a);
 					}
+					Console.WriteLine("Nombre congreso: " + ((Congreso)p).nombre);
+					Console.WriteLine("Ciudad congreso: " + ((Congreso)p).ciudad);
+					Console.WriteLine("Fecha congreso: " + ((Congreso)p).fecha);
 				}
 			}
 		}
