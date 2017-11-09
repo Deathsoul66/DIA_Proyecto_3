@@ -19,7 +19,7 @@ namespace Proy_Nelson
 									  Convert.ToString(Publicaciones.Attribute("DOI").Value).Trim(),
 									  Convert.ToString(Publicaciones.Element("titulo").Value).Trim(),
 									  Convert.ToString(Publicaciones.Element("editorial").Value).Trim(),
-									  Convert.ToString(Publicaciones.Element("anoPublicacion").Value).Trim(),
+									  Convert.ToDateTime(Publicaciones.Element("anoPublicacion").Value.Trim()),
 									  Convert.ToString(Publicaciones.Element("pagInicio").Value).Trim(),
 									  Convert.ToString(Publicaciones.Element("pagFin").Value).Trim(),
 														autores);
@@ -34,7 +34,7 @@ namespace Proy_Nelson
 			string DOI = "";
 			string titulo = "";
 			string editorial = "";
-			string anoPublicacion = "";
+			DateTime fechaPublicacion = new DateTime(); ;
 			string pagInicio = "";
 			string pagFin = "";
 			string autor = "";
@@ -81,10 +81,16 @@ namespace Proy_Nelson
 								editorial = editorial.Trim();
 							}
 
-							if (n1.Name == "AnhoPublicacion")
+							if (n1.Name == "FechaPublicacion")
 							{
-								anoPublicacion = n1.InnerText;
-								anoPublicacion = anoPublicacion.Trim();
+								/*string[] fech = n1.InnerText.Trim().Split('/');
+								fechaPublicacion = new DateTime(Convert.ToInt32(fech[2]),
+								                                Convert.ToInt32(fech[1]),
+								                                Convert.ToInt32(fech[0]));
+								*/
+								//option B
+								fechaPublicacion = Convert.ToDateTime(n1.InnerText.Trim());
+								fechaPublicacion = fechaPublicacion.Date;
 							}
 
 							if (n1.Name == "PaginaIni")
@@ -132,7 +138,7 @@ namespace Proy_Nelson
 							}
 						}
 					}
-					Publicacion pub = Publicacion.Create(tipo, DOI, titulo, editorial, anoPublicacion, pagInicio, pagFin, autores, nombre, ciudad, fecha);
+					Publicacion pub = Publicacion.Create(tipo, DOI, titulo, editorial, fechaPublicacion, pagInicio, pagFin, autores, nombre, ciudad, fecha);
 					publicaciones.Add(pub);
 					//THE NEXT LINES WAS FOR TESTING PURPOSES ONLY
 					/*

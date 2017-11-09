@@ -4,7 +4,7 @@
   <Libro DOI="453JHASGJHSADGASDG21">
     <Titulo>La vida y la muerte de jose papito</Titulo>
     <Editorial>JK.Patatas</Editorial>
-    <AnhoPublicacion>1987</AnhoPublicacion>
+    <FechaPublicacion>05/05/1987</FechaPublicacion>
     <PaginaIni>1</PaginaIni>
     <PaginaFin>339</PaginaFin>
     <Autores>
@@ -18,7 +18,7 @@
   <Articulo DOI="65976509786597633563">
     <Titulo>Panchi, me has jodido el test</Titulo>
     <Editorial>Frankie M.</Editorial>
-    <AnhoPublicacion>2017</AnhoPublicacion>
+    <FechaPublicacion>25/12/2016</FechaPublicacion>
     <PaginaIni>18</PaginaIni>
     <PaginaFin>19</PaginaFin>
     <Autores>
@@ -33,7 +33,7 @@
   <Congreso DOI="98765465849486519799">
     <Titulo>La vida, un misterio. La muerte, suceso seguro.</Titulo>
     <Editorial>Planeta</Editorial>
-    <AnhoPublicacion>2018</AnhoPublicacion>
+    <FechaPublicacion>01/01/2018</FechaPublicacion>
     <PaginaIni>182</PaginaIni>
     <PaginaFin>200</PaginaFin>
     <Autores>

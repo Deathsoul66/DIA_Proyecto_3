@@ -111,8 +111,13 @@ namespace Proy_Nelson
 			this.publicaciones = XmlReader.read();
 			foreach (Publicacion p in publicaciones)
 			{
-				Console.WriteLine("PUBLICACION => Tipo:" + p.getTipo() + "DOI:" + p.DOI + "TITULO:" + p.Titulo + "EDITORIAL:" +
-								  p.Editorial + "Año pub:" + p.AnoPublicacion + "P.Inicio:" + p.PagInicio + "P.Fin:" + p.PagFin);
+				Console.WriteLine("PUBLICACION => Tipo:" + p.getTipo() + "\n" 
+				                  + "DOI:" + p.DOI + "\n" 
+				                  + "TITULO:" + p.Titulo + "\n"
+				                  + "EDITORIAL:" + p.Editorial + "\n"
+				                  + "Fecha pub:" + p.FechaPublicacion.Date + "\n"
+				                  + "P.Inicio:" + p.PagInicio + "\n"
+				                  + "P.Fin:" + p.PagFin);
 				if (p is Articulo)
 				{
 					foreach (String a in p.Autores)
@@ -212,7 +217,7 @@ namespace Proy_Nelson
 			foreach (Publicacion pub in this.publicaciones)
 			{
 				store.AppendValues(pub.getTipo(), pub.DOI, pub.Titulo, pub.Editorial, 
-				                   pub.AnoPublicacion, pub.PagInicio, pub.PagFin, pub.autoresToString(),
+				                   pub.FechaPublicacion.ToString("dd/MM/yyyy"), pub.PagInicio, pub.PagFin, pub.autoresToString(),
 				                   pub.getNombre(), pub.getCiudad(), pub.getFecha());
 			}
 

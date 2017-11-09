@@ -9,12 +9,12 @@ namespace Proy_Nelson
 		public string ciudad { get; set; }
 		public string fecha { get; set; }
 
-		public Congreso(string DOI, string titulo, string editorial, string anoPublicacion, string pagInicio, string pagFin, List<string> autores, string nombre, string ciudad, string fecha)
+		public Congreso(string DOI, string titulo, string editorial, DateTime fechaPublicacion, string pagInicio, string pagFin, List<string> autores, string nombre, string ciudad, string fecha)
 		{
 			base.DOI = DOI;
 			base.Titulo = titulo;
 			base.Editorial = editorial;
-			base.FechaPublicacion = anoPublicacion;
+			base.FechaPublicacion = fechaPublicacion;
 			base.PagInicio = pagInicio;
 			base.PagFin = pagFin;
 			base.Autores = autores;
