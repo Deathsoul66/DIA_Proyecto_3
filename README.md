@@ -1,4 +1,4 @@
-# DIA_Proyecto_3
+﻿# DIA_Proyecto_3
 
 Un departamento universitario necesita llevar la cuenta de la producción científica de sus miembros. Para ello necesita una aplicación con los siguientes módulos:
 
@@ -19,7 +19,7 @@ Gestión de méritos científicos (altas, bajas, modificaciones), salvaguarda y 
   - Nombre del Congreso (si es aplicable) -> string  
   - Ciudad de celebración del Congreso (si es aplicable) -> string  
   - Fechas de celebración del Congreso (si es aplicable)  -> date
-  - Año de publicación  -> int
+  - Fecha de publicación  -> date
   - Página inicial y página final -> int 
   - Autor(es) (pueden ser miembros del departamento (al menos uno), o no). -> string  
   
