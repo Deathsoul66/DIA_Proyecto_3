@@ -11,21 +11,24 @@ namespace Proy_Nelson
 			tipo, DOI, titulo, editorial, anoPublicacion, pagInicio, pagFin, autores, nombre, ciudad, fecha
 		}
 
-		List<Publicacion> publicaciones = new List<Publicacion>();
+		Box vbox;
+		ScrolledWindow sw;
+
+		List<Publicacion> publicaciones = XmlReader.read();
 
 		TreeView treeView;
 
 		public ViewInformes() : base("Informer - DIA Individual Nelson")
 		{
 			//CONFIG WINDOW
-			SetDefaultSize(860, 640);
+			SetDefaultSize(1024, 640);
 			SetPosition(WindowPosition.Center);
 			//Free DRM icon.png : source @ http://findicons.com/icon/558115/free_bsd#
 			SetIconFromFile("icon.png");
 			//SYSTEM EVENTS
 			DeleteEvent += OnDelete;
 			//VERTICAL BOXs
-			Box vbox = new VBox(false, 2);
+			vbox = new VBox(false, 2);
 			//ELEMENTS
 			// = MENU =
 			MenuBar barraMenu = new MenuBar();
@@ -45,7 +48,7 @@ namespace Proy_Nelson
 
 			//TESTING LISTAR XML
 
-			ScrolledWindow sw = new ScrolledWindow();
+			sw = new ScrolledWindow();
 			sw.ShadowType = ShadowType.EtchedIn;
 			sw.SetPolicy(PolicyType.Automatic, PolicyType.Automatic);
 			ListStore conjuntoRecorridos = CreateModel();
@@ -57,18 +60,22 @@ namespace Proy_Nelson
 
 			//ADD TO VERTICAL BOX
 			vbox.PackStart(barraMenu, false, false, 0); //MENU
+			vbox.PackStart(sw, true, true, 0); //LISTAR
 
 			//ADD TO SHOW
 			Add(vbox);
 
-			//SHOW
+			//SHOW INITIAL VIEW
 			ShowAll();
+			sw.Hide();
 
 			//EVENTS
 			about.ButtonPressEvent += OnMenuAboutActivated;
 			salir.ButtonPressEvent += OnMenuSalirActivated;
 			test.ButtonPressEvent += OnMenuTestActivated;
+			infMensual.ButtonPressEvent += OnMenuInfMensualActivated;
 		}
+
 
 		void OnDelete(object obj, DeleteEventArgs args) { Application.Quit(); }
 
@@ -82,7 +89,7 @@ namespace Proy_Nelson
 			AboutDialog about = new AboutDialog();
 			about.SetIconFromFile("icon.png");
 			about.ProgramName = "Informer";
-			about.Version = "0.0.1";
+			about.Version = "0.1.2";
 			about.Copyright = "(c) Nelson Martinez";
 			about.Comments = @"Informer is a simple solution proyect for DIA @ ESEI";
 			about.Website = "informer.fake.web";
@@ -104,7 +111,7 @@ namespace Proy_Nelson
 			this.publicaciones = XmlReader.read();
 			foreach (Publicacion p in publicaciones)
 			{
-				Console.WriteLine("PUBLICACION => " + "DOI:" + p.DOI + "TITULO:" + p.Titulo + "EDITORIAL:" +
+				Console.WriteLine("PUBLICACION => Tipo:" + p.getTipo() + "DOI:" + p.DOI + "TITULO:" + p.Titulo + "EDITORIAL:" +
 								  p.Editorial + "Año pub:" + p.AnoPublicacion + "P.Inicio:" + p.PagInicio + "P.Fin:" + p.PagFin);
 				if (p is Articulo)
 				{
@@ -131,7 +138,10 @@ namespace Proy_Nelson
 					Console.WriteLine("Ciudad congreso: " + ((Congreso)p).ciudad);
 					Console.WriteLine("Fecha congreso: " + ((Congreso)p).fecha);
 				}
+				Console.WriteLine("\n====  TEST AUTORES ====\n");
+				Console.WriteLine(p.autoresToString() + "\n");
 			}
+			vistaRecorridos();
 		}
 
 		void AddColumns()
@@ -201,11 +211,28 @@ namespace Proy_Nelson
 
 			foreach (Publicacion pub in this.publicaciones)
 			{
-				store.AppendValues(null);
+				store.AppendValues(pub.getTipo(), pub.DOI, pub.Titulo, pub.Editorial, 
+				                   pub.AnoPublicacion, pub.PagInicio, pub.PagFin, pub.autoresToString(),
+				                   pub.getNombre(), pub.getCiudad(), pub.getFecha());
 			}
 
 			return store;
 		}
 
+		void OnMenuInfMensualActivated(object o, ButtonPressEventArgs args)
+		{
+			Console.Write("HAHA");
+		}
+		void vistaRecorridos()
+		{
+			vbox.Remove(sw);
+			sw.Remove(treeView);
+			treeView = new TreeView(CreateModel());
+			treeView.RulesHint = true;
+			AddColumns();
+			sw.Add(treeView);
+			vbox.PackStart(sw, true, true, 0); //LISTAR
+			ShowAll();
+		}
 	}
 }

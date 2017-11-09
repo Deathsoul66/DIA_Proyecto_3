@@ -12,8 +12,6 @@ namespace Proy_Nelson
 			Application.Run();
 
 			return;
-
-			return;
 		}
 	}
 }

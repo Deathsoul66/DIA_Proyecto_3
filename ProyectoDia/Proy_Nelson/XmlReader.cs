@@ -134,6 +134,7 @@ namespace Proy_Nelson
 					}
 					Publicacion pub = Publicacion.Create(tipo, DOI, titulo, editorial, anoPublicacion, pagInicio, pagFin, autores, nombre, ciudad, fecha);
 					publicaciones.Add(pub);
+					//THE NEXT LINES WAS FOR TESTING PURPOSES ONLY
 					/*
 					String auts = "";
 					foreach (String a in autores)
