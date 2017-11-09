@@ -13,13 +13,13 @@ Gestión de miembros del departamento (altas, bajas, modificaciones), salvaguard
   
 Gestión de méritos científicos (altas, bajas, modificaciones), salvaguarda y recuperación. Pueden ser: libros, artículos o comunicación   (en congreso). (Victor e Imanol Cobian)
 
-  - Código DOI o autoasignado si no está disponible el DOI -> string 
+  - Código DOI o autoasignado si no está disponible el DOI -> string 	(DOI = 10.1000/182 (los num antes de la / indenfican al autor, los de despues al objeto o publicacion) 
   - Título  -> string
   - Editorial  -> string
   - Nombre del Congreso (si es aplicable) -> string  
   - Ciudad de celebración del Congreso (si es aplicable) -> string  
   - Fechas de celebración del Congreso (si es aplicable)  -> date
-  - Año de publicación  -> date
+  - Año de publicación  -> int
   - Página inicial y página final -> int 
   - Autor(es) (pueden ser miembros del departamento (al menos uno), o no). -> string  
   
