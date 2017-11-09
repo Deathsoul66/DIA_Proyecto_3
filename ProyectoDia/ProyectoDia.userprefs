@@ -9,9 +9,9 @@
       <File FileName="Proy_Marco\Program.cs" Line="12" Column="2" />
       <File FileName="Proy_Marco\devolverPublicacion_Vista.cs" Line="1" Column="1" />
       <File FileName="Proy_Marco\devolverPublicacion_Controller.cs" Line="1" Column="1" />
-      <File FileName="Proy_Marco\Publicacion.cs" Line="29" Column="28" />
-      <File FileName="Proy_Marco\listaPublicacion.cs" Line="30" Column="29" />
-      <File FileName="Proy_Marco\Xml_Model.cs" Line="198" Column="40" />
+      <File FileName="Proy_Marco\Publicacion.cs" Line="6" Column="9" />
+      <File FileName="Proy_Marco\listaPublicacion.cs" Line="6" Column="9" />
+      <File FileName="Proy_Marco\Xml_Model.cs" Line="27" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />

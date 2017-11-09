@@ -13,34 +13,111 @@ namespace Practica2
 		{
 		}
 
-		public static void devolverXMLLinqCongreso(String nombre = null, String anho = null, String tipo = null)
+		//public static void devolverXMLLinqPublicacion(string nombre = "", string anho = "", string tipo = "")
+		//{
+		//	listaPublicacion pubList = new listaPublicacion();
+		//	XElement raiz = XElement.Load("publicacionXML.xml");
+
+		//	var listaPub = from elem in raiz.Elements("Publicacion")
+		//				   //where ((string)elem.Name).Contains(tipo) &&
+		//		           where() && () && ()
+		//				   select elem;
+
+		//	List<XElement> lp = listaPub.ToList<XElement>();
+
+		//	List<Publicacion> lp2 = new List<Publicacion>();
+
+		//	for (int i = 0; i < lp.Count; ++i)
+		//	{
+		//		XElement elem = lp[i];
+
+		//		var pub = new Publicacion(
+		//							Convert.ToString(elem.Name).Trim(),
+		//							Convert.ToString(elem.Attribute("DOI").Value).Trim(),
+		//							Convert.ToString(elem.Element("Titulo").Value).Trim(),
+		//							Convert.ToString(elem.Element("Editorial").Value).Trim(),
+		//							Convert.ToString(elem.Element("AnhoPublicacion").Value).Trim(),
+		//							Convert.ToString(elem.Element("PaginaIni").Value).Trim(),
+		//							Convert.ToString(elem.Element("PaginaFin").Value).Trim(),
+		//							null,
+		//							Convert.ToString(elem.Element("Nombre").Value).Trim(),
+		//							Convert.ToString(elem.Element("Ciudad").Value).Trim(),
+		//							Convert.ToString(elem.Element("Fecha").Value).Trim()
+		//		);
+		//		lp2.Add(pub);
+		//	}
+		//}
+
+		public static listaPublicacion filtrarLista(listaPublicacion listaP, string nombre = "", string anho = "", string tipo = "")
 		{
-			listaPublicacion pubList = new listaPublicacion();
-			XElement raiz = XElement.Load("publicacionXML.xml");
+			listaPublicacion toRet1 = listaP;
+			listaPublicacion toRet2 = new listaPublicacion();
+			listaPublicacion toRet3 = new listaPublicacion();
+			listaPublicacion toRetFin = new listaPublicacion();
 
-			var listaPub = from elem in raiz.Elements("Congreso")
-							select new Publicacion(
-				                                	Convert.ToString(elem.Name).Trim(),
-													Convert.ToString(elem.Attribute("DOI").Value).Trim(),
-													Convert.ToString(elem.Element("Titulo").Value).Trim(),
-													Convert.ToString(elem.Element("Editorial").Value).Trim(),
-													Convert.ToString(elem.Element("AnhoPublicacion").Value).Trim(),
-													Convert.ToString(elem.Element("PaginaIni").Value).Trim(),
-													Convert.ToString(elem.Element("PaginaFin").Value).Trim(),
-													null,
-													Convert.ToString(elem.Attribute("Nombre").Value).Trim(),
-													Convert.ToString(elem.Attribute("Ciudad").Value).Trim(),
-													Convert.ToString(elem.Attribute("Fecha").Value).Trim()
-												);
-			
-			List<Publicacion> lp = listaPub.ToList<Publicacion>();
+			listaP = null;
 
-			foreach (Publicacion pub in listaPub)
+			if (nombre != "")
 			{
-				pubList.addPublicacion(pub);
+				for (int i = 0; i < toRet1.getLength(); i++) {
+
+					List<String> listaAut = toRet1.getPublicacion(i).Autores;
+
+					for (int j = 0; j < listaAut.Count(); j++) { 
+					
+						if (listaAut[j] == nombre) {
+							toRet2.addPublicacion(toRet1.getPublicacion(i));
+						}
+					}
+
+					listaAut = null;
+				}
+
+			}
+			else 
+			{
+				toRet2 = toRet1;
 			}
 
-		}
+			toRet1 = null;
+
+			if (anho != "")
+			{
+				for (int i = 0; i<toRet2.getLength(); i++) {
+					if (toRet2.getPublicacion(i).AnhoPublicacion == anho) {
+						toRet3.addPublicacion(toRet2.getPublicacion(i));
+					}
+				
+				}
+
+			}
+			else
+			{
+				toRet3 = toRet2;
+			}
+
+			toRet2 = null;
+
+			if (tipo != "")
+			{
+				for (int i = 0; i<toRet3.getLength(); i++) {
+					if (toRet3.getPublicacion(i).Tipo == tipo) {
+						toRetFin.addPublicacion(toRet3.getPublicacion(i));
+					}
+				
+				}
+
+			}
+			else
+			{
+				toRetFin = toRet3;
+			}
+
+			toRet3 = null;
+
+			return toRetFin;
+		}
+
 
 		public static listaPublicacion devolverXML()
 		{
@@ -153,4 +230,5 @@ namespace Practica2
 		}
 
 	}
+
 }
