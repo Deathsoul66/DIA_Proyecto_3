@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +5,7 @@ using System.Xml;
 using System.Xml.Linq;
 using Proy_Marco;
 
-namespace Practica2
+namespace Proy_Marco
 {
 	public class XMLreader
 	{
@@ -60,13 +59,16 @@ namespace Practica2
 
 			if (nombre != "")
 			{
-				for (int i = 0; i < toRet1.getLength(); i++) {
+				for (int i = 0; i < toRet1.getLength(); i++)
+				{
 
 					List<String> listaAut = toRet1.getPublicacion(i).Autores;
 
-					for (int j = 0; j < listaAut.Count(); j++) { 
-					
-						if (listaAut[j] == nombre) {
+					for (int j = 0; j < listaAut.Count(); j++)
+					{
+
+						if (listaAut[j] == nombre)
+						{
 							toRet2.addPublicacion(toRet1.getPublicacion(i));
 						}
 					}
@@ -75,7 +77,7 @@ namespace Practica2
 				}
 
 			}
-			else 
+			else
 			{
 				toRet2 = toRet1;
 			}
@@ -84,11 +86,13 @@ namespace Practica2
 
 			if (anho != "")
 			{
-				for (int i = 0; i<toRet2.getLength(); i++) {
-					if (toRet2.getPublicacion(i).AnhoPublicacion == anho) {
+				for (int i = 0; i < toRet2.getLength(); i++)
+				{
+					if (toRet2.getPublicacion(i).AnhoPublicacion == anho)
+					{
 						toRet3.addPublicacion(toRet2.getPublicacion(i));
 					}
-				
+
 				}
 
 			}
@@ -101,11 +105,13 @@ namespace Practica2
 
 			if (tipo != "")
 			{
-				for (int i = 0; i<toRet3.getLength(); i++) {
-					if (toRet3.getPublicacion(i).Tipo == tipo) {
+				for (int i = 0; i < toRet3.getLength(); i++)
+				{
+					if (toRet3.getPublicacion(i).Tipo == tipo)
+					{
 						toRetFin.addPublicacion(toRet3.getPublicacion(i));
 					}
-				
+
 				}
 
 			}
@@ -119,165 +125,6 @@ namespace Practica2
 			return toRetFin;
 		}
 
-
-		public static listaPublicacion devolverXML()
-		{
-			listaPublicacion toRet = new listaPublicacion();
-			XmlDocument xmlDoc = new XmlDocument();
-			string tipo = "";
-			string id = "";
-			string titulo = "";
-			string editorial = "";
-			string anho = "";
-			string inicio = "";
-			string fin = "";
-			string autor = "";
-			string nombre = "";
-			string ciudad = "";
-			string fecha = "";
-			List<string> autores = new List<string>();
-
-			xmlDoc.Load("publicacionXml.xml");
-
-			if (xmlDoc.DocumentElement.Name == "Publicaciones")
-			{
-				foreach (XmlNode publicacion in xmlDoc.DocumentElement.ChildNodes)
-				{
-					tipo = publicacion.Name;
-					id = publicacion.Value;
-
-					foreach (XmlNode n in publicacion.ChildNodes)
-					{
-						if (n.Name == "Titulo")
-						{
-							titulo = n.InnerText;
-							titulo = titulo.Trim();
-						}
-
-						if (n.Name == "Editorial")
-						{
-							editorial = n.InnerText;
-							editorial = editorial.Trim();
-						}
-
-						if (n.Name == "AnhoPublicacion")
-						{
-							anho = n.InnerText;
-							anho = anho.Trim();
-						}
-
-						if (n.Name == "PaginaIni")
-						{
-							inicio = n.InnerText;
-							inicio = inicio.Trim();
-						}
-
-						if (n.Name == "PaginaFin")
-						{
-							fin = n.InnerText;
-							fin = fin.Trim();
-						}
-
-						foreach (XmlNode n2 in n.ChildNodes)
-						{
-							if (n.Name == "Autor")
-							{
-								autor = n.InnerText;
-								autor = autor.Trim();
-							}
-
-							autores.Add(autor);
-						}
-
-						if (n.Name == "Nombre")
-						{
-							nombre = n.InnerText;
-							nombre = nombre.Trim();
-						}
-
-						if (n.Name == "Ciudad")
-						{
-							ciudad = n.InnerText;
-							ciudad = ciudad.Trim();
-						}
-
-						if (n.Name == "Fecha")
-						{
-							fecha = n.InnerText;
-							fecha = fecha.Trim();
-						}
-
-
-						Publicacion pub = new Publicacion();
-
-						pub.Tipo = tipo;
-						pub.Id = id;
-						pub.Titulo = titulo;
-						pub.Editorial = editorial;
-						pub.AnhoPublicacion = anho;
-						pub.PaginaIni = inicio;
-						pub.PaginaFin = fin;
-						pub.Autores = autores;
-						pub.Nombre = nombre;
-						pub.Ciudad = ciudad;
-						pub.Fecha = fecha;
-
-						toRet.addPublicacion(pub);
-					}
-				}
-			}
-
-			return toRet;
-		}
-
-	}
-
-}
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
-using System.Xml.Linq;
-using Proy_Marco;
-
-namespace Proy_Marco
-{
-	public class XMLreader
-	{
-		public XMLreader()
-		{
-		}
-
-		public static listaPublicacion devolverXMLLinqCongreso(String nombre = null, String anho = null, String tipo = null)
-		{
-			listaPublicacion pubList = new listaPublicacion();
-			XElement raiz = XElement.Load("Test.xml");
-
-			var listaPub = from elem in raiz.Elements("Publicacion")
-						   select new Publicacion(
-												   Convert.ToString(elem.Name).Trim(),
-												   Convert.ToString(elem.Attribute("DOI").Value).Trim(),
-												   Convert.ToString(elem.Element("Titulo").Value).Trim(),
-												   Convert.ToString(elem.Element("Editorial").Value).Trim(),
-												   Convert.ToString(elem.Element("AnhoPublicacion").Value).Trim(),
-												   Convert.ToString(elem.Element("PaginaIni").Value).Trim(),
-												   Convert.ToString(elem.Element("PaginaFin").Value).Trim(),
-												   null,
-												   Convert.ToString(elem.Attribute("Nombre").Value).Trim(),
-												   Convert.ToString(elem.Attribute("Ciudad").Value).Trim(),
-												   Convert.ToString(elem.Attribute("Fecha").Value).Trim()
-											   );
-
-			List<Publicacion> lp = listaPub.ToList<Publicacion>();
-
-			foreach (Publicacion pub in listaPub)
-			{
-				pubList.addPublicacion(pub);
-			}
-
-			return pubList;
-		}
 
 		public static listaPublicacion devolverXML()
 		{
@@ -399,5 +246,6 @@ namespace Proy_Marco
 		}
 
 	}
+
 }
->>>>>>> origin/master
+
