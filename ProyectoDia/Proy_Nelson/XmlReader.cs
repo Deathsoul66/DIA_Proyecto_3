@@ -9,9 +9,6 @@ namespace Proy_Nelson
 {
 	public class XmlReader
 	{
-
-
-
 		public static void readLinq(string filename)
 		{
 			XElement XML = XElement.Load(filename);
@@ -44,7 +41,6 @@ namespace Proy_Nelson
 			string nombre = "";
 			string ciudad = "";
 			string fecha = "";
-			List<string> autores = new List<string>();
 
 			xmlDoc.Load("Test.xml");
 
@@ -52,7 +48,7 @@ namespace Proy_Nelson
 			{
 				foreach (XmlNode publicacion in xmlDoc.DocumentElement.ChildNodes)
 				{
-					autores.Clear();
+					List<string> autores = new List<string>();
 					foreach (XmlNode n in publicacion.ChildNodes)
 					{
 						if (n.Name == "Articulo" || n.Name == "Congreso" || n.Name == "Libro")
@@ -138,7 +134,14 @@ namespace Proy_Nelson
 					}
 					Publicacion pub = Publicacion.Create(tipo, DOI, titulo, editorial, anoPublicacion, pagInicio, pagFin, autores, nombre, ciudad, fecha);
 					publicaciones.Add(pub);
-					//Console.WriteLine(string.Format("[Publicacion: Tipo={0}, Id={1}, Titulo={2}, Editorial={3}, AnhoPublicacion={4}, PaginaIni={5}, PaginaFin={6}, Autores={7}, Nombre={8}, Ciudad={9}, Fecha={10}]", tipo, DOI, titulo, editorial, anoPublicacion, pagInicio, pagFin, autores, nombre, ciudad, fecha));
+					/*
+					String auts = "";
+					foreach (String a in autores)
+					{
+						auts += a + ", ";
+					}
+					Console.WriteLine(string.Format("[Publicacion: Tipo={0}, Id={1}, Titulo={2}, Editorial={3}, AnhoPublicacion={4}, PaginaIni={5}, PaginaFin={6}, Autores={7}, Nombre={8}, Ciudad={9}, Fecha={10}]", tipo, DOI, titulo, editorial, anoPublicacion, pagInicio, pagFin, auts, nombre, ciudad, fecha));
+					*/
 				}
 			}
 			return publicaciones;
