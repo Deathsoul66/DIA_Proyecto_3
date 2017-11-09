@@ -7,6 +7,10 @@ namespace Proy_ImaTor
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Hello World!");
+
+            DateTime d = new DateTime();
+            Console.WriteLine(d);
+
 		}
 	}
 }
