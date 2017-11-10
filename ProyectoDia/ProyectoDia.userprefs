@@ -4,7 +4,16 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proy_Nelson\TestMiembros.xml">
+    <Files>
+      <File FileName="Proy_Nelson\ViewInformes.cs" Line="92" Column="56" />
+      <File FileName="Proy_Nelson\XmlReader.cs" Line="197" Column="25" />
+      <File FileName="Proy_Nelson\Publicacion.cs" Line="1" Column="1" />
+      <File FileName="..\EjemploEstructuraMiembro.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Proy_Nelson\Miembro.cs" Line="35" Column="1" NotebookId="1" />
+      <File FileName="Proy_Nelson\TestMiembros.xml" Line="11" Column="1" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Proy__Marco PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Proy__Nelson PreferredExecutionTarget="MonoDevelop.Default" />

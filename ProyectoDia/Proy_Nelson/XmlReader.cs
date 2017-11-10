@@ -25,7 +25,8 @@ namespace Proy_Nelson
 														autores);
 		}
 
-		public static List<Publicacion> read()
+
+		public static List<Publicacion> readPublicaciones(string filename)
 		{
 			List<Publicacion> publicaciones = new List<Publicacion>();
 
@@ -42,7 +43,7 @@ namespace Proy_Nelson
 			string ciudad = "";
 			string fecha = "";
 
-			xmlDoc.Load("Test.xml");
+			xmlDoc.Load(filename);
 
 			if (xmlDoc.DocumentElement.Name == "Publicaciones")
 			{
@@ -152,6 +153,50 @@ namespace Proy_Nelson
 				}
 			}
 			return publicaciones;
+		}
+
+		public static List<Miembro> readMiembros(string filename)
+		{
+			List<Miembro> miembros = new List<Miembro>();
+
+			XmlDocument xmlDoc = new XmlDocument();
+			string dni = "", nombre = "", apellidos = "", telefono = "", email = "", direccion = "";
+
+			xmlDoc.Load(filename);
+
+			if (xmlDoc.DocumentElement.Name == "Miembros")
+			{
+				foreach (XmlNode miembro in xmlDoc.DocumentElement.ChildNodes)
+				{
+					dni = miembro.Attributes["DNI"].InnerText.Trim();
+					foreach (XmlNode m in miembro.ChildNodes)
+					{
+						switch (m.Name)
+						{
+							case ("Nombre"):
+								nombre = m.InnerText.Trim();
+								break;
+							case ("Apellidos"):
+								apellidos = m.InnerText.Trim();
+								break;
+							case ("Telefono"):
+								telefono = m.InnerText.Trim();
+								break;
+							case ("Email"):
+								email = m.InnerText.Trim();
+								break;
+							case ("Direccion"):
+								direccion = m.InnerText.Trim();
+								break;
+						}
+					}
+					Miembro miem = new Miembro(dni, nombre, apellidos, telefono, email, direccion);
+					miembros.Add(miem);
+					//NEXT LINE IS FOR TESTING PURPOSES ONLY
+					Console.WriteLine(miem);
+				}
+			}
+			return miembros;
 		}
 	}
 }

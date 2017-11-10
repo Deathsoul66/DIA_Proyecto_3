@@ -20,5 +20,15 @@ namespace Proy_Nelson
 			this.direccion = direccion;
 		}
 
+		public override string ToString()
+		{
+			return string.Format("=== Miembro ===\n" +
+			                     "DNI= " + dni + "\n" +
+			                     "NOMBRE= " + nombre + "\n" +
+			                     "APELLIDOS= " + apellidos+ "\n" +
+			                     "TELEFONO= " + telefono + "\n" +
+			                     "EMAIL= " + email + "\n" +
+			                     "DIRECCION= " + direccion + "\n");
+		}
 	}
 }

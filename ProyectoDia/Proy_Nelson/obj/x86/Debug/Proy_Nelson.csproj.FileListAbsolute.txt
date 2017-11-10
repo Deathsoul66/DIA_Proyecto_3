@@ -25,3 +25,5 @@ C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\bin\Debug\p
 C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\obj\x86\Debug\Proy_Nelson.exe
 C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\obj\x86\Debug\Proy_Nelson.pdb
 C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\obj\x86\Debug\Proy_Nelson.csprojResolveAssemblyReference.cache
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\bin\Debug\Mono.Cairo.dll
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Nelson\bin\Debug\TestMiembros.xml

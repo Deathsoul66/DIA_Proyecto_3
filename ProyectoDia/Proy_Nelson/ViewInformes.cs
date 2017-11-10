@@ -1,6 +1,7 @@
 using Gtk;
 using System;
 using System.Collections.Generic;
+using Mono;
 
 namespace Proy_Nelson
 {
@@ -14,7 +15,8 @@ namespace Proy_Nelson
 		Box vbox;
 		ScrolledWindow sw;
 
-		List<Publicacion> publicaciones = XmlReader.read();
+		List<Publicacion> publicaciones = XmlReader.readPublicaciones("Test.xml");
+		List<Miembro> miembros = XmlReader.readMiembros("TestMiembros.xml");
 
 		TreeView treeView;
 
@@ -57,6 +59,8 @@ namespace Proy_Nelson
 			sw.Add(treeView);
 			AddColumns();
 
+			//Grafica
+
 
 			//ADD TO VERTICAL BOX
 			vbox.PackStart(barraMenu, false, false, 0); //MENU
@@ -89,7 +93,7 @@ namespace Proy_Nelson
 			AboutDialog about = new AboutDialog();
 			about.SetIconFromFile("icon.png");
 			about.ProgramName = "Informer";
-			about.Version = "0.1.2";
+			about.Version = "0.1.4";
 			about.Copyright = "(c) Nelson Martinez";
 			about.Comments = @"Informer is a simple solution proyect for DIA @ ESEI";
 			about.Website = "informer.fake.web";
@@ -108,7 +112,6 @@ namespace Proy_Nelson
 
 		void OnMenuTestActivated(object sender, EventArgs e)
 		{
-			this.publicaciones = XmlReader.read();
 			foreach (Publicacion p in publicaciones)
 			{
 				Console.WriteLine("PUBLICACION => Tipo:" + p.getTipo() + "\n" 
