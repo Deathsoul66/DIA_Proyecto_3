@@ -89,7 +89,7 @@ namespace Proy_Marco
 
 			Button full = new Button("Show All");
 			full.Clicked += OnClickFull;
-			full.SetSizeRequest(50, 20);
+			full.SetSizeRequest(70, 20);
 			pnlButton2.PackStart(full, false, false, 5);
 
 			Button quit = new Button("Quit");
