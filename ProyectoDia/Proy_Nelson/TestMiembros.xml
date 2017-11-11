@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Miembros>
+	<Miembro DNI="12345678A">
+		<Nombre>Steve</Nombre>
+		<Apellidos>Rogers</Apellidos>
+		<Telefono>123778496</Telefono>
+		<Email>srogers@esei.uvigo.es</Email>
+		<Direccion>Privada</Direccion>
+	</Miembro>
+	<Miembro DNI="98765432I">
+		<Nombre>Bruce</Nombre>
+		<Apellidos>Banner</Apellidos>
+		<Telefono>654321897</Telefono>
+		<Email>bbanner@esei.uvigo.es</Email>
+		<Direccion>Mejor no</Direccion>
+	</Miembro>
+	<Miembro DNI="22446688U">
+		<Nombre>Tony</Nombre>
+		<Apellidos>Stark</Apellidos>
+		<Telefono>987456321</Telefono>
+		<Email>stark@ultron.com</Email>
+		<Direccion>2523 Avda. Malibu, California</Direccion>
+	</Miembro>
+</Miembros>
