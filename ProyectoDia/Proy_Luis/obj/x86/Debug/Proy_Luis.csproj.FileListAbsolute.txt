@@ -1,0 +1,5 @@
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Luis\bin\Debug\Proy_Luis.exe
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Luis\bin\Debug\Proy_Luis.pdb
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Luis\obj\x86\Debug\Proy_Luis.csprojResolveAssemblyReference.cache
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Luis\obj\x86\Debug\Proy_Luis.exe
+C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Luis\obj\x86\Debug\Proy_Luis.pdb

@@ -66,76 +66,46 @@ namespace Proy_Nelson
 									tipo = TipoPublicacion.Libro;
 									break;
 							}
-							DOI = n.Attributes["DOI"].InnerText;
+							DOI = n.Attributes["DOI"].InnerText.Trim();
 						}
 						foreach (XmlNode n1 in n.ChildNodes)
 						{
-							if (n1.Name == "Titulo")
+							switch (n1.Name)
 							{
-								titulo = n1.InnerText;
-								titulo = titulo.Trim();
-							}
-
-							if (n1.Name == "Editorial")
-							{
-								editorial = n1.InnerText;
-								editorial = editorial.Trim();
-							}
-
-							if (n1.Name == "FechaPublicacion")
-							{
-								/*string[] fech = n1.InnerText.Trim().Split('/');
-								fechaPublicacion = new DateTime(Convert.ToInt32(fech[2]),
-								                                Convert.ToInt32(fech[1]),
-								                                Convert.ToInt32(fech[0]));
-								*/
-								//option B
-								fechaPublicacion = Convert.ToDateTime(n1.InnerText.Trim());
-								fechaPublicacion = fechaPublicacion.Date;
-							}
-
-							if (n1.Name == "PaginaIni")
-							{
-								pagInicio = n1.InnerText;
-								pagInicio = pagInicio.Trim();
-							}
-
-							if (n1.Name == "PaginaFin")
-							{
-								pagFin = n1.InnerText;
-								pagFin = pagFin.Trim();
-							}
-
-							if (n1.Name == "Autores")
-							{
-								foreach (XmlNode n2 in n1.ChildNodes)
-								{
-									if (n2.Name == "Autor")
+								case "Titulo":
+									titulo = n1.InnerText.Trim();
+									break;
+								case "Editorial":
+									editorial = n1.InnerText.Trim();
+									break;
+								case "FechaPublicacion":
+									fechaPublicacion = (Convert.ToDateTime(n1.InnerText.Trim())).Date;
+									break;
+								case "PaginaIni":
+									pagInicio = n1.InnerText.Trim();
+									break;
+								case "PaginaFin":
+									pagFin = n1.InnerText.Trim();
+									break;
+								case "Autores":
+									foreach (XmlNode n2 in n1.ChildNodes)
 									{
-										autor = n2.InnerText;
-										autor = autor.Trim();
+										if (n2.Name == "Autor")
+										{
+											autor = n2.InnerText.Trim();
+										}
+										autores.Add(autor);
 									}
-
-									autores.Add(autor);
-								}
-							}
-
-							if (n1.Name == "Nombre")
-							{
-								nombre = n1.InnerText;
-								nombre = nombre.Trim();
-							}
-
-							if (n1.Name == "Ciudad")
-							{
-								ciudad = n1.InnerText;
-								ciudad = ciudad.Trim();
-							}
-
-							if (n1.Name == "Fecha")
-							{
-								fecha = n1.InnerText;
-								fecha = fecha.Trim();
+									break;
+								case "Nombre":
+									nombre = n1.InnerText.Trim();
+									break;
+								case "Ciudad":
+									ciudad = n1.InnerText.Trim();
+									break;
+								case "Fecha":
+									fecha = n1.InnerText.Trim();
+									break;
 							}
 						}
 					}
