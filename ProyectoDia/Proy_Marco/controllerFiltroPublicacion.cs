@@ -9,32 +9,10 @@ namespace Proy_Marco
 		
 		}
 
-		public void generarVistaFormularioFiltro() 
-		{
-			vistaFiltroPublicacionBuscador buscador = new vistaFiltroPublicacionBuscador();
-			buscador.ShowAll();
-		}
-
-		public void generarVistaTablaFiltrada(String nombre = "", String anho = "" , String tipo = "")
-		{
-			listaPublicacion devueltoLista = XMLreader.devolverXML();
-			devueltoLista = XMLreader.filtrarLista(devueltoLista, nombre, anho, tipo);
-
-			vistaFiltroPublicacionTabla tabla = new vistaFiltroPublicacionTabla(devueltoLista);
+		public void generarVistaTablaBuscador()
+		{ 
+			vistaFiltroPublicacion tabla = new vistaFiltroPublicacion();
 			tabla.ShowAll();
-		}
-
-		public void decidirVista(int vista, List<String> datos) 
-		{
-			if (vista == 1)
-			{
-				generarVistaFormularioFiltro();
-			}
-			else
-			{
-				generarVistaTablaFiltrada();
-			}	
-
 		}
 
 	}

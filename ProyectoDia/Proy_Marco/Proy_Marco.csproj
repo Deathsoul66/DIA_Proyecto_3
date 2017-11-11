@@ -49,6 +49,7 @@
     <Compile Include="listaPublicacion.cs" />
     <Compile Include="vistaFiltroPublicacionBuscador.cs" />
     <Compile Include="vistaFiltroPublicacionTabla.cs" />
+    <Compile Include="vistaFiltroPublicacion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Test.xml">

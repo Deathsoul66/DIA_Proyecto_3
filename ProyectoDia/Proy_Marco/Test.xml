@@ -4,7 +4,7 @@
   <Libro DOI="453JHASGJHSADGASDG21">
     <Titulo>La vida y la muerte de jose papito</Titulo>
     <Editorial>JK.Patatas</Editorial>
-    <AnhoPublicacion>1987</AnhoPublicacion>
+    <FechaPublicacion>21/11/1987</FechaPublicacion>
     <PaginaIni>1</PaginaIni>
     <PaginaFin>339</PaginaFin>
     <Autores>
@@ -18,7 +18,7 @@
   <Articulo DOI="453JHASGJHSADGASDG21">
     <Titulo>Ripper</Titulo>
     <Editorial>JK</Editorial>
-    <AnhoPublicacion>1978</AnhoPublicacion>
+    <FechaPublicacion>13/07/1978</FechaPublicacion>
     <PaginaIni>1</PaginaIni>
     <PaginaFin>339</PaginaFin>
     <Autores>
@@ -32,7 +32,7 @@
   <Congreso DOI="453JHASGJHSADGASDG21">
     <Titulo>Owens</Titulo>
     <Editorial>Patatas</Editorial>
-    <AnhoPublicacion>1999</AnhoPublicacion>
+    <FechaPublicacion>05/07/1999</FechaPublicacion>
     <PaginaIni>1</PaginaIni>
     <PaginaFin>339</PaginaFin>
     <Autores>

@@ -1,4 +1,5 @@
 ﻿using System;
+using Gtk;
 
 namespace Proy_Marco
 {
@@ -8,17 +9,15 @@ namespace Proy_Marco
 		{
 			Console.WriteLine("Testing");
 
-			Gtk.Application.Init();
+			Application.Init();
 
 			controllerFiltroPublicacion control = new controllerFiltroPublicacion();
-			control.generarVistaFormularioFiltro();
+			control.generarVistaTablaBuscador();
 
-			Gtk.Application.Run();
-
-			Gtk.Application.Quit();
+			Application.Run();
+			Application.Quit();
 
 			var test = Console.Read();
-
 		}
 	}
 }

@@ -133,13 +133,14 @@ namespace Proy_Marco
 			string id = "";
 			string titulo = "";
 			string editorial = "";
-			string anho = "";
+			string anhoString = "";
 			string inicio = "";
 			string fin = "";
 			string autor = "";
 			string nombre = "";
 			string ciudad = "";
 			string fecha = "";
+			int anho = 0;
 			List<string> autores = new List<string>();
 
 			xmlDoc.Load("Test.xml");
@@ -170,10 +171,12 @@ namespace Proy_Marco
 								editorial = editorial.Trim();
 							}
 
-							if (n1.Name == "AnhoPublicacion")
+							if (n1.Name == "FechaPublicacion")
 							{
-								anho = n1.InnerText;
-								anho = anho.Trim();
+								
+								anhoString = n1.InnerText.Trim();
+								anho = Convert.ToDateTime(anhoString).Year;
+								anhoString = anho.ToString();
 							}
 
 							if (n1.Name == "PaginaIni")
@@ -227,7 +230,7 @@ namespace Proy_Marco
 						pub.Id = id;
 						pub.Titulo = titulo;
 						pub.Editorial = editorial;
-						pub.AnhoPublicacion = anho;
+						pub.AnhoPublicacion = anhoString;
 						pub.PaginaIni = inicio;
 						pub.PaginaFin = fin;
 						pub.Autores = autores;
