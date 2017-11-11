@@ -1,4 +1,4 @@
-C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Test.xml
+﻿C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Test.xml
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Proy_Marco.exe
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Proy_Marco.pdb
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gdk-sharp.dll
@@ -15,7 +15,6 @@ C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gdk-sharp.pdb
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\atk-sharp.pdb
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\pango-sharp.pdb
-<<<<<<< HEAD
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\es\mscorlib.resources.dll
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\normidna.nlp
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\normnfc.nlp
@@ -24,24 +23,4 @@ C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\normnfkd.nlp
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.exe
 C:\Users\burni\Desktop\Stuff2\Grado\7º Cuatrimestre\DIA\Practica\Proyecto_DIA_3\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.pdb
-=======
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Test.xml
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Proy_Marco.exe
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Proy_Marco.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gdk-sharp.dll
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glade-sharp.dll
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glib-sharp.dll
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gtk-dotnet.dll
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gtk-sharp.dll
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\atk-sharp.dll
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\pango-sharp.dll
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gtk-dotnet.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glib-sharp.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\glade-sharp.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\gdk-sharp.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\atk-sharp.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\pango-sharp.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.csprojResolveAssemblyReference.cache
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.exe
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.pdb
->>>>>>> origin/master
+

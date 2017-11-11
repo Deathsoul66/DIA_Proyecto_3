@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{90006D9B-09C8-49C0-863C-8490A8F36830}|Default">
+﻿<Properties StartupConfiguration="{D48F5170-A9BA-496E-9C2C-A34B6716B8E1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -6,7 +6,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench>
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1273" Y="0" Width="1278" Height="1368">
+      <FloatingWindow WindowId="1" X="1266" Y="0" Width="1278" Height="1368">
         <Files>
           <File FileName="..\README.md" Line="30" Column="54" />
         </Files>
