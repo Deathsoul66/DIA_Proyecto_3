@@ -56,8 +56,8 @@ namespace Proy_ImaTor
 
                     raiz.Add(new XElement("Publicacion", new XElement(p.Tipo, new XAttribute("DOI", p.DOI)), new XElement("Titulo", p.Titulo), 
                                           new XElement("Editorial", p.Editorial), new XElement("Anho", p.AnhoPublicacion), new XElement("PaginaIni", p.PaginaInicial),
-                                          new XElement("PaginaFin", p.PaginaFinal), autores, new XElement("Nombre", ((Congreso)p).Nombre), 
-                                          new XElement("Ciudad", ((Congreso)p).Ciudad), new XElement("Fecha", ((Congreso)p).Fecha)));
+                                          new XElement("PaginaFin", p.PaginaFinal), new XElement("Nombre", ((Congreso)p).Nombre), 
+                                          new XElement("Ciudad", ((Congreso)p).Ciudad), new XElement("Fecha", ((Congreso)p).Fecha.ToString("d")), autores));
 
                 }else{
 					raiz.Add(new XElement("Publicacion", new XElement(p.Tipo, new XAttribute("DOI", p.DOI)), new XElement("Titulo", p.Titulo),
@@ -76,6 +76,7 @@ namespace Proy_ImaTor
                 foreach(XElement publicacion in raiz.Elements("Publicacion")){
 
                     List<string> autores = new List<string>();
+
                     foreach (XElement autor in publicacion.Elements("Autores"))
 					{
                         autores.Add(autor.Element("Autor").Value);
@@ -83,11 +84,23 @@ namespace Proy_ImaTor
 
                     if(publicacion.Element("Congreso") != null){
                         
-                        Add(new Congreso(publicacion.Attribute("DOI").Value, publicacion.Element("Titulo").Value,
+                        dicionario.Add(publicacion.Element("Congreso").Attribute("DOI").Value, new Congreso(publicacion.Element("Congreso").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
                                          publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
                                          Int32.Parse(publicacion.Element("PaginaFin").Value), publicacion.Element("Nombre").Value, 
-                                         publicacion.Element("Ciudad").Value, publicacion.Element("Fecha").Value, autores.ToArray());
-                    }
+                                         publicacion.Element("Ciudad").Value, DateTime.ParseExact(publicacion.Element("Fecha").Value, "dd/MM/yyyy", 
+                                                                                                  System.Globalization.CultureInfo.InvariantCulture), autores.ToArray()));
+                    }else if(publicacion.Element("Articulo") != null){
+
+                        dicionario.Add(publicacion.Element("Articulo").Attribute("DOI").Value, new Articulo(publicacion.Element("Articulo").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
+										 publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
+										 Int32.Parse(publicacion.Element("PaginaFin").Value), autores.ToArray()));
+                        
+					}else if(publicacion.Element("Libro") != null){
+
+                        dicionario.Add(publicacion.Element("Libro").Attribute("DOI").Value, new Libro(publicacion.Element("Libro").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
+										 publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
+										 Int32.Parse(publicacion.Element("PaginaFin").Value), autores.ToArray()));
+					}
                 }
                     
             }catch{

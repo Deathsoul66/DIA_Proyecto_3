@@ -41,6 +41,11 @@
     <Compile Include="Articulo.cs" />
     <Compile Include="Congreso.cs" />
     <Compile Include="ListaPublicaciones.cs" />
+    <Compile Include="View\MainWindowCore.cs" />
+    <Compile Include="View\MainWindowView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

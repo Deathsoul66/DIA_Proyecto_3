@@ -17,7 +17,7 @@ namespace Proy_ImaTor
         public List<string> Autores { get { return ListaAutores; } }
 
         public Publicacion(){}
-        public Publicacion(string DOI, string Titulo ,string Editorial, int anhoPublicacion, int PaginaInicial, int PaginaFinal, params string[] Autores){
+        public Publicacion(string DOI, string Titulo ,string Editorial, int anhoPublicacion, int PaginaInicial, int PaginaFinal, string[] Autores){
             this.DOI = DOI;
             this.Titulo = Titulo;
             this.Editorial = Editorial;
@@ -29,7 +29,7 @@ namespace Proy_ImaTor
             }
         }
 
-		public Publicacion(string Titulo, string Editorial, int anhoPublicacion, int PaginaInicial, int PaginaFinal, params string[] Autores)
+		public Publicacion(string Titulo, string Editorial, int anhoPublicacion, int PaginaInicial, int PaginaFinal, string[] Autores)
 		{
 			this.DOI = GenerarDOI();
 			this.Titulo = Titulo;
