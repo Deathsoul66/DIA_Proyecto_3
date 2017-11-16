@@ -11,11 +11,11 @@ namespace Proy_ImaTor.View
 		private Entry entInicio = new Entry();
 		private Entry entDestino = new Entry();
 		private Entry entKm = new Entry();
-		private ListStore ls = new ListStore(typeof(int), typeof(string), typeof(string), typeof(string), typeof(string), typeof(string),
-                                             typeof(int), typeof(int), typeof(string), typeof(string), typeof(string));
+		private ListStore ls = new ListStore(typeof(int), typeof(string), typeof(string), typeof(string), typeof(string), typeof(int),
+                                             typeof(int), typeof(int), typeof(string), typeof(string), typeof(string),typeof(string));
 		VBox vbox = new VBox(false, 2);
 
-		public MainWindow() : base("Publicacions")
+		public MainWindow() : base("Publicaciones")
 		{
 			SetDefaultSize(1024, 768);
 			SetPosition(WindowPosition.Center);

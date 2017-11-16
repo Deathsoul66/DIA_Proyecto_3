@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
-using System.Xml;
+using System.Linq;
 
 namespace Proy_ImaTor
 {
     public class ListaPublicaciones
     {
+        
         private Dictionary<string, Publicacion> dicionario = new Dictionary<string, Publicacion>();
-        public List<Publicacion> Publicaciones { get { return dicionario.Values.ToList(); } }
+        public List<Publicacion> GetPublicaciones (){
+            
+            return dicionario.Select(d => d.Value).ToList();
+        }
 
         public bool Add(Publicacion p)
         {

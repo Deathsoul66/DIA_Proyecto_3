@@ -23,9 +23,11 @@ namespace Proy_ImaTor
             ListaPublicaciones lista = new ListaPublicaciones();
             ps.ForEach(p => Console.WriteLine(string.Format("{0}",(lista.Add(p) ? "correcto" : "IMcorrecto"))));
 
-            Console.WriteLine(lista);
+            //Console.WriteLine(lista);
+            var list = lista.GetPublicaciones();
 
-            lista.CrearXML("/home/yco/Publicaciones.xml");
+            list.ForEach(p => Console.WriteLine(p));
+            /*lista.CrearXML("/home/chaen/Publicaciones.xml");
 
             ListaPublicaciones l2 = new ListaPublicaciones();
 

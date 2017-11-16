@@ -39,9 +39,20 @@ namespace Proy_ImaTor.View
 		{
 			cont = 1;
             listaP.CargarXML(fileroute);
-            foreach (Publicacion p in listaP.Publicaciones)
+            foreach (Publicacion p in listaP.GetPublicaciones())
 			{
-				ls.AppendValues(cont++, v.Inicio, v.Destino, v.KM, v.Autocar, v.Recorrido);
+                string autores = "";
+                foreach(string autor in p.Autores){
+                    autores += autor + " ";
+                }
+
+                if(p.Tipo.Equals("Congreso")){
+                    ls.AppendValues(cont++, p.Tipo, p.DOI, p.Titulo, p.Editorial, p.AnhoPublicacion, p.PaginaInicial, p.PaginaFinal, autores, 
+                                    ((Congreso)p).Nombre,((Congreso)p).Ciudad,((Congreso)p).Fecha.ToString("d"));
+                }else{
+                    ls.AppendValues(cont++, p.Tipo, p.DOI, p.Titulo, p.Editorial, p.AnhoPublicacion, p.PaginaInicial, p.PaginaFinal, autores, "-", "-", "-");
+                }
+				
 			}
 		}
     }
