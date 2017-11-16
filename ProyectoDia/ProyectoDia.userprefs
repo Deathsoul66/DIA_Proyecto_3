@@ -6,7 +6,7 @@
       <File FileName="Proy_ImaTor/ListaPublicaciones.cs" Line="90" Column="149" />
       <File FileName="Proy_ImaTor/Program.cs" Line="26" Column="13" />
       <File FileName="Proy_ImaTor/View/MainWindowCore.cs" Line="6" Column="9" />
-      <File FileName="Proy_ImaTor/View/MainWindowView.cs" Line="4" Column="2" />
+      <File FileName="Proy_ImaTor/View/MainWindowView.cs" Line="4" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

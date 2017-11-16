@@ -1,5 +1,12 @@
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Test.xml
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Proy_Marco.exe
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\bin\Debug\Proy_Marco.pdb
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.exe
-C:\Users\Nelson\Documents\DIA\DIA_Proyecto_3\ProyectoDia\Proy_Marco\obj\x86\Debug\Proy_Marco.pdb
+C:/Users/Nelson/Documents/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Marco/bin/Debug/Test.xml
+C:/Users/Nelson/Documents/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Marco/bin/Debug/Proy_Marco.exe
+C:/Users/Nelson/Documents/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Marco/bin/Debug/Proy_Marco.pdb
+C:/Users/Nelson/Documents/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Marco/obj/x86/Debug/Proy_Marco.exe
+C:/Users/Nelson/Documents/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Marco/obj/x86/Debug/Proy_Marco.pdb
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Marco/bin/Debug/Test.xml
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Marco/bin/Debug/Proy_Marco.exe
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Marco/bin/Debug/Proy_Marco.pdb
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Marco/obj/x86/Debug/Proy_Marco.csprojResolveAssemblyReference.cache
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Marco/obj/x86/Debug/Proy_Marco.csproj.CoreCompileInputs.cache
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Marco/obj/x86/Debug/Proy_Marco.exe
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Marco/obj/x86/Debug/Proy_Marco.pdb

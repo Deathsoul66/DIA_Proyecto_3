@@ -1,0 +1,5 @@
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Luis/bin/Debug/Proy_Luis.exe
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Luis/bin/Debug/Proy_Luis.pdb
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Luis/obj/x86/Debug/Proy_Luis.csproj.CoreCompileInputs.cache
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Luis/obj/x86/Debug/Proy_Luis.exe
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Luis/obj/x86/Debug/Proy_Luis.pdb

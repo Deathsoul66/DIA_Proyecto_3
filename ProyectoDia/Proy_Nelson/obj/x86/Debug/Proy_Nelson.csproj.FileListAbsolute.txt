@@ -25,3 +25,12 @@ C:/Users/Nelson/Documents/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/bin/Debug/T
 /home/chaen/Escritorio/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/obj/x86/Debug/Proy_Nelson.csproj.CoreCompileInputs.cache
 /home/chaen/Escritorio/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/obj/x86/Debug/Proy_Nelson.exe
 /home/chaen/Escritorio/DIA/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/obj/x86/Debug/Proy_Nelson.pdb
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/bin/Debug/icon.png
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/bin/Debug/about.png
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/bin/Debug/Test.xml
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/bin/Debug/Proy_Nelson.exe
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/bin/Debug/Proy_Nelson.pdb
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/obj/x86/Debug/Proy_Nelson.csprojResolveAssemblyReference.cache
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/obj/x86/Debug/Proy_Nelson.csproj.CoreCompileInputs.cache
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/obj/x86/Debug/Proy_Nelson.exe
+/home/yco/Documentos/DIA/Proyecto/DIA_Proyecto_3/ProyectoDia/Proy_Nelson/obj/x86/Debug/Proy_Nelson.pdb

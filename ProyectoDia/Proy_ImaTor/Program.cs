@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 namespace Proy_ImaTor
 {
-	class MainClass
-	{
+    using Proy_ImaTor.View;
+    class MainClass
+    {
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			/*Console.WriteLine("Hello World!");
 
             //string[] autores = { "pepe", "asfad" };
 
@@ -31,7 +32,12 @@ namespace Proy_ImaTor
 
             l2.CargarXML("/home/yco/Publicaciones.xml");
 
-            Console.WriteLine(l2);
+            Console.WriteLine(l2);*/
+
+			Gtk.Application.Init();
+			var win = new MainWindow();
+			win.ShowAll();
+			Gtk.Application.Run();
 		}
 	}
 }

@@ -7,9 +7,8 @@ namespace Proy_ImaTor
 {
     public class ListaPublicaciones
     {
-        private List<Publicacion> listaP = new List<Publicacion>();
         private Dictionary<string, Publicacion> dicionario = new Dictionary<string, Publicacion>();
-        public List<Publicacion> Publicaciones { get { return listaP; } }
+        public List<Publicacion> Publicaciones { get { return dicionario.Values.ToList(); } }
 
         public bool Add(Publicacion p)
         {
