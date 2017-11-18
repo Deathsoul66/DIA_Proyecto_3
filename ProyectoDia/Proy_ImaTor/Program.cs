@@ -27,12 +27,12 @@ namespace Proy_ImaTor
             var list = lista.GetPublicaciones();
 
             list.ForEach(p => Console.WriteLine(p));
-            /*lista.CrearXML("/home/chaen/Publicaciones.xml");
+            //lista.CrearXML("/home/chaen/Publicaciones.xml");
 
             ListaPublicaciones l2 = new ListaPublicaciones();
 
 
-            l2.CargarXML("/home/yco/Publicaciones.xml");
+            l2.CargarXML("/home/chaen/Publicaciones.xml");
 
             Console.WriteLine(l2);*/
 

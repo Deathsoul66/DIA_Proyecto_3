@@ -14,6 +14,12 @@ namespace Proy_ImaTor
             return dicionario.Select(d => d.Value).ToList();
         }
 
+        public Publicacion GetPublicacion(string DOI){
+            Publicacion p = new Publicacion();
+			
+            return dicionario.TryGetValue(DOI, out p)? p : null;
+        }
+
         public bool Add(Publicacion p)
         {
             if(dicionario.ContainsKey(p.DOI)){
@@ -24,14 +30,19 @@ namespace Proy_ImaTor
             }
         }
 
-        public bool Eliminar(Publicacion p)
+        public bool Eliminar(string DOI)
         {
-            return dicionario.Remove(p.DOI);
+            return dicionario.Remove(DOI);
         }
 
         public bool Modificar(Publicacion p)
         {
-            return Add(p);
+			if (dicionario.ContainsKey(p.DOI)){
+                dicionario[p.DOI] = p;
+				return true;
+			}else{
+                return false;
+			}
         }
 
         public override string ToString()
@@ -80,9 +91,9 @@ namespace Proy_ImaTor
 
                     List<string> autores = new List<string>();
 
-                    foreach (XElement autor in publicacion.Elements("Autores"))
+                    foreach (XElement autor in publicacion.Element("Autores").Elements("Autor"))
 					{
-                        autores.Add(autor.Element("Autor").Value);
+                        autores.Add(autor.Value);
 					}
 
                     if(publicacion.Element("Congreso") != null){

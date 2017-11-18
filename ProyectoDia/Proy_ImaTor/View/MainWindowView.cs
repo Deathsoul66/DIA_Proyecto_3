@@ -7,13 +7,21 @@ namespace Proy_ImaTor.View
 		private Toolbar tlb;
 		private TreeView mainTree = new TreeView();
 		private ScrolledWindow scrWin = new ScrolledWindow();
-		private HBox hbox = new HBox(false, 3);
-		private Entry entInicio = new Entry();
-		private Entry entDestino = new Entry();
-		private Entry entKm = new Entry();
-		private ListStore ls = new ListStore(typeof(int), typeof(string), typeof(string), typeof(string), typeof(string), typeof(int),
+		private Entry entTipo = new Entry();
+        private Entry entDOI = new Entry();
+        private Entry entTitulo = new Entry();
+        private Entry entEditorial = new Entry();
+        private Entry entAnho = new Entry();
+        private Entry entPIni = new Entry();
+        private Entry entPFin = new Entry();
+        private Entry entNombre = new Entry();
+        private Entry entCiudad = new Entry();
+        //private Entry entFecha = new Entry();
+        private Calendar entFecha = new Calendar();
+        private Entry entAutores = new Entry();
+		private ListStore ls = new ListStore(typeof(string), typeof(string), typeof(string), typeof(string), typeof(int),
                                              typeof(int), typeof(int), typeof(string), typeof(string), typeof(string),typeof(string));
-		VBox vbox = new VBox(false, 2);
+		
 
 		public MainWindow() : base("Publicaciones")
 		{
@@ -21,6 +29,7 @@ namespace Proy_ImaTor.View
 			SetPosition(WindowPosition.Center);
 			DeleteEvent += delegate { Application.Quit(); };
 
+            VBox vbox = new VBox(false, 2);
 			vbox.PackStart(CrearToolbar(), false, false, 0);
 			vbox.PackStart(CrearTabla(), true, true, 2);
 
@@ -40,6 +49,8 @@ namespace Proy_ImaTor.View
             ToolButton salir = new ToolButton(Stock.Close);
 
             listaPublicacion.Clicked += AbrirXML;
+            guardar.Clicked += GuardarXML;
+            nuevoPublicacion.Clicked += AñadirEntries;
 
 			tlb.Add(listaPublicacion);
 			tlb.Add(nuevoPublicacion);
@@ -48,7 +59,7 @@ namespace Proy_ImaTor.View
 			tlb.Add(salir);
 
 			/*lista.Clicked += MostrarLista;
-			nuevoPublicacion.Clicked += AñadirEntries;*/
+			*/
 			salir.Clicked += delegate { Application.Quit(); };
 
 			return tlb;
@@ -56,83 +67,76 @@ namespace Proy_ImaTor.View
 
 		private ScrolledWindow CrearTabla()
 		{
-			TreeViewColumn num = new TreeViewColumn { Title = "#", Alignment = 0.5f };
-			num.Expand = true;
-			CellRendererText cell = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
-			num.PackStart(cell, true);
-			num.AddAttribute(cell, "text", 0);
-
 			TreeViewColumn publicacion = new TreeViewColumn { Title = "Publicacion", Alignment = 0.5f };
 			publicacion.Expand = true;
 			CellRendererText cell1 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			publicacion.PackStart(cell1, true);
-			publicacion.AddAttribute(cell1, "text", 1);
+			publicacion.AddAttribute(cell1, "text", 0);
 
             TreeViewColumn doi = new TreeViewColumn { Title = "DOI", Alignment = 0.5f };
 			doi.Expand = true;
 			CellRendererText cell2 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			doi.PackStart(cell2, true);
-			doi.AddAttribute(cell2, "text", 2);
+			doi.AddAttribute(cell2, "text", 1);
 
             TreeViewColumn titulo = new TreeViewColumn { Title = "Titulo", Alignment = 0.5f };
 			titulo.Expand = true;
 			CellRendererText cell3 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			titulo.PackStart(cell3, true);
-			titulo.AddAttribute(cell3, "text", 3);
+			titulo.AddAttribute(cell3, "text", 2);
 
             TreeViewColumn editorial = new TreeViewColumn { Title = "Editorial", Alignment = 0.5f };
 			editorial.Expand = true;
 			CellRendererText cell4 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			editorial.PackStart(cell4, true);
-			editorial.AddAttribute(cell4, "text", 4);
+			editorial.AddAttribute(cell4, "text", 3);
 
             TreeViewColumn anho = new TreeViewColumn { Title = "Año", Alignment = 0.5f };
 			anho.Expand = true;
 			CellRendererText cell5 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			anho.PackStart(cell5, true);
-			anho.AddAttribute(cell5, "text", 5);
+			anho.AddAttribute(cell5, "text", 4);
 
 			TreeViewColumn pagIni = new TreeViewColumn { Title = "PagInicio", Alignment = 0.5f };
 			pagIni.Expand = true;
 			CellRendererText cell6 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			pagIni.PackStart(cell6, true);
-			pagIni.AddAttribute(cell6, "text", 6);
+			pagIni.AddAttribute(cell6, "text", 5);
 
 			TreeViewColumn pagFin = new TreeViewColumn { Title = "PagFin", Alignment = 0.5f };
 			pagFin.Expand = true;
 			CellRendererText cell7 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			pagFin.PackStart(cell7, true);
-			pagFin.AddAttribute(cell7, "text", 7);
+			pagFin.AddAttribute(cell7, "text", 6);
 
 			TreeViewColumn autores = new TreeViewColumn { Title = "Autores", Alignment = 0.5f };
 			autores.Expand = true;
 			CellRendererText cell8 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			autores.PackStart(cell8, true);
-			autores.AddAttribute(cell8, "text", 8);
+			autores.AddAttribute(cell8, "text", 7);
 
 			TreeViewColumn nombre = new TreeViewColumn { Title = "Nombre", Alignment = 0.5f };
 			nombre.Expand = true;
 			CellRendererText cell9 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			nombre.PackStart(cell9, true);
-			nombre.AddAttribute(cell9, "text", 9);
+			nombre.AddAttribute(cell9, "text", 8);
 
 			TreeViewColumn ciudad = new TreeViewColumn { Title = "Ciudad", Alignment = 0.5f };
 			ciudad.Expand = true;
 			CellRendererText cell10 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			ciudad.PackStart(cell10, true);
-			ciudad.AddAttribute(cell10, "text", 10);
+			ciudad.AddAttribute(cell10, "text", 9);
 
 			TreeViewColumn fecha = new TreeViewColumn { Title = "Fecha", Alignment = 0.5f };
 			fecha.Expand = true;
 			CellRendererText cell11 = new CellRendererText { Alignment = Pango.Alignment.Center, Xalign = 0.5f };
 			fecha.PackStart(cell11, true);
-			fecha.AddAttribute(cell11, "text", 11);
+			fecha.AddAttribute(cell11, "text", 10);
 
 			//DatosXML();
 
 			mainTree.Model = ls;
 
-			mainTree.AppendColumn(num);
             mainTree.AppendColumn(publicacion);
 			mainTree.AppendColumn(doi);
 			mainTree.AppendColumn(titulo);
@@ -144,36 +148,98 @@ namespace Proy_ImaTor.View
             mainTree.AppendColumn(nombre);
             mainTree.AppendColumn(ciudad);
             mainTree.AppendColumn(fecha);
-
+            mainTree.RowActivated += UpdateForm;
 			scrWin.Add(mainTree);
 
 			return scrWin;
 		}
 
-		private HBox CrearBotones()
+        private ComboBox TipoPublicacion(){
+            return new ComboBox(new string[] { "Articulo", "Congreso", "Libro" }); ;
+        }
+
+        private Alignment CrearBotones(string tipo)
 		{
-			Label lblInicio = new Label("Ciudad Inicio");
-			entInicio.MaxLength = 50;
+            VBox left = new VBox(false, 3);
+            VBox right = new VBox(false, 3);
+            HBox hbox = new HBox(false, 5);
+			VBox left2 = new VBox(false, 3);
+			VBox right2 = new VBox(false, 3);
 
-			Label lblDestino = new Label("Ciudad Destino");
-			entDestino.MaxLength = 50;
+            Label lblTipo = new Label("Tipo de Publicacion: ");
+            lblTipo.Xalign = 1;
+            entTipo.Text = tipo;
+            entTipo.CanFocus = false;
+            left.PackStart(lblTipo);
+            right.PackStart(entTipo);
 
-			Label lblKm = new Label("Distancia");
-			entKm.MaxLength = 5;
+            Label lblDOI = new Label("DOI: ");
+            lblDOI.Xalign = 1;
+			left.PackStart(lblDOI);
+            right.PackStart(entDOI);
 
-			Button btnAñadir = new Button("Añadir Publicacion");
+			Label lblTitulo = new Label("Titulo: ");
+			lblTitulo.Xalign = 1;
+			left.PackStart(lblTitulo);
+			right.PackStart(entTitulo);
 
-			hbox.PackStart(lblInicio, false, false, 5);
-			hbox.PackStart(entInicio, false, false, 0);
-			hbox.PackStart(lblDestino, false, false, 0);
-			hbox.PackStart(entDestino, false, false, 0);
-			hbox.PackStart(lblKm, false, false, 0);
-			hbox.PackStart(entKm, false, false, 0);
-			hbox.PackEnd(btnAñadir, false, false, 5);
+			Label lblEditorial = new Label("Editorial: ");
+			lblEditorial.Xalign = 1;
+			left.PackStart(lblEditorial);
+			right.PackStart(entEditorial);
 
-			//btnAñadir.Clicked += EventoBotonAñadir;
+			Label lblAnho = new Label("Año: ");
+			lblAnho.Xalign = 1;
+			left.PackStart(lblAnho);
+			right.PackStart(entAnho);
 
-			return hbox;
+			Label lblPI = new Label("Pagina Inicio: ");
+			lblPI.Xalign = 1;
+			left.PackStart(lblPI);
+			right.PackStart(entPIni);
+
+			Label lblPF = new Label("Pagina Fin: ");
+			lblPF.Xalign = 1;
+			left.PackStart(lblPF);
+            right.PackStart(entPFin);
+
+			Label lblAutores = new Label("Autores: ");
+			lblAutores.Xalign = 1;
+			left.PackStart(lblAutores);
+			right.PackStart(entAutores);
+
+            if(tipo.Equals("Congreso")){
+				Label lblNombre = new Label("Nombre Congreso: ");
+				lblNombre.Xalign = 1;
+				left.PackStart(lblNombre);
+                right.PackStart(entNombre);
+
+				Label lblCiudad = new Label("Ciudad: ");
+				lblCiudad.Xalign = 1;
+				left.PackStart(lblCiudad);
+				right.PackStart(entCiudad);
+
+				Label lblFecha = new Label("Fecha Congreso: ");
+				lblFecha.Xalign = 1;
+				left2.PackStart(lblFecha);
+				right2.PackStart(entFecha);
+               
+
+			}
+			
+
+			hbox.Add(left);
+			hbox.Add(right);
+			hbox.Add(left2);
+			hbox.Add(right2);
+
+			Alignment alignment = new Alignment(1, 0, 1, 0);
+			alignment.SetPadding(10, 10, 10, 10);
+            alignment.Add(hbox);
+
+			return alignment;
 		}
 	}
+
+
 }
