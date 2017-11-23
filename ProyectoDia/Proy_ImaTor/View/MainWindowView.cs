@@ -192,16 +192,20 @@ namespace Proy_ImaTor.View
 			lblAnho.Xalign = 1;
 			left.PackStart(lblAnho);
 			right.PackStart(entAnho);
+            entAnho.MaxLength = 4;
+            entAnho.TextInserted += OnlyNumber;
 
 			Label lblPI = new Label("Pagina Inicio: ");
 			lblPI.Xalign = 1;
 			left.PackStart(lblPI);
 			right.PackStart(entPIni);
+            entPIni.TextInserted += OnlyNumber;
 
 			Label lblPF = new Label("Pagina Fin: ");
 			lblPF.Xalign = 1;
 			left.PackStart(lblPF);
             right.PackStart(entPFin);
+            entPFin.TextInserted += OnlyNumber;
 
 			Label lblAutores = new Label("Autores: ");
 			lblAutores.Xalign = 1;

@@ -84,6 +84,7 @@ namespace Proy_ImaTor
 
         public void CargarXML(string ruta)
         {
+            int cont = 0;
             try{
                 XElement raiz = XElement.Load(ruta);
 
@@ -96,29 +97,41 @@ namespace Proy_ImaTor
                         autores.Add(autor.Value);
 					}
 
-                    if(publicacion.Element("Congreso") != null){
-                        
-                        dicionario.Add(publicacion.Element("Congreso").Attribute("DOI").Value, new Congreso(publicacion.Element("Congreso").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
-                                         publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
-                                         Int32.Parse(publicacion.Element("PaginaFin").Value), publicacion.Element("Nombre").Value, 
-                                         publicacion.Element("Ciudad").Value, DateTime.ParseExact(publicacion.Element("Fecha").Value, "dd/MM/yyyy", 
-                                                                                                  System.Globalization.CultureInfo.InvariantCulture), autores.ToArray()));
-                    }else if(publicacion.Element("Articulo") != null){
+                    try{
+						if (publicacion.Element("Congreso") != null)
+						{
 
-                        dicionario.Add(publicacion.Element("Articulo").Attribute("DOI").Value, new Articulo(publicacion.Element("Articulo").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
-										 publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
-										 Int32.Parse(publicacion.Element("PaginaFin").Value), autores.ToArray()));
-                        
-					}else if(publicacion.Element("Libro") != null){
+							dicionario.Add(publicacion.Element("Congreso").Attribute("DOI").Value, new Congreso(publicacion.Element("Congreso").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
+											 publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
+											 Int32.Parse(publicacion.Element("PaginaFin").Value), publicacion.Element("Nombre").Value,
+											 publicacion.Element("Ciudad").Value, DateTime.ParseExact(publicacion.Element("Fecha").Value, "dd/MM/yyyy",
+																									  System.Globalization.CultureInfo.InvariantCulture), autores.ToArray()));
+						}
+						else if (publicacion.Element("Articulo") != null)
+						{
 
-                        dicionario.Add(publicacion.Element("Libro").Attribute("DOI").Value, new Libro(publicacion.Element("Libro").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
-										 publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
-										 Int32.Parse(publicacion.Element("PaginaFin").Value), autores.ToArray()));
-					}
+							dicionario.Add(publicacion.Element("Articulo").Attribute("DOI").Value, new Articulo(publicacion.Element("Articulo").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
+											 publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
+											 Int32.Parse(publicacion.Element("PaginaFin").Value), autores.ToArray()));
+
+						}
+						else if (publicacion.Element("Libro") != null)
+						{
+
+							dicionario.Add(publicacion.Element("Libro").Attribute("DOI").Value, new Libro(publicacion.Element("Libro").Attribute("DOI").Value, publicacion.Element("Titulo").Value,
+											 publicacion.Element("Editorial").Value, Int32.Parse(publicacion.Element("Anho").Value), Int32.Parse(publicacion.Element("PaginaIni").Value),
+											 Int32.Parse(publicacion.Element("PaginaFin").Value), autores.ToArray()));
+						}
+                    }catch{
+                        cont++;
+                    }
                 }
                     
             }catch{
-                Console.WriteLine("Podrian llamarte Hoyu");
+                throw new Exception("Error al abrir archivo!");
+            }
+            if(cont!=0){
+                throw new Exception("Error al crear Publicacion leyendo el archivo. Formato incorrecto!");
             }
         }
     }

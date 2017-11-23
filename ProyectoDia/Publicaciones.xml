@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Publicaciones>
+  <Publicacion>
+    <Libro DOI="XM.GGJG/X31" />
+    <Titulo>ssss</Titulo>
+    <Editorial>aaaaa</Editorial>
+    <Anho>1</Anho>
+    <PaginaIni>2</PaginaIni>
+    <PaginaFin>3</PaginaFin>
+    <Autores>
+      <Autor>pepe</Autor>
+      <Autor>efdsdbf</Autor>
+    </Autores>
+  </Publicacion>
+  <Publicacion>
+    <Articulo DOI="12.2SN2/NEL" />
+    <Titulo>ssss</Titulo>
+    <Editorial>aaaaa</Editorial>
+    <Anho>1</Anho>
+    <PaginaIni>2</PaginaIni>
+    <PaginaFin>3</PaginaFin>
+    <Autores>
+      <Autor>pepe</Autor>
+      <Autor>asfad</Autor>
+    </Autores>
+  </Publicacion>
+  <Publicacion>
+    <Congreso DOI="XA.AQS0/YPB" />
+    <Titulo>ssss</Titulo>
+    <Editorial>aaaaa</Editorial>
+    <Anho>1</Anho>
+    <PaginaIni>2</PaginaIni>
+    <PaginaFin>3</PaginaFin>
+    <Nombre>Nombre</Nombre>
+    <Ciudad>Ciudad</Ciudad>
+    <Fecha>15/11/2017</Fecha>
+    <Autores>
+      <Autor>pepe</Autor>
+      <Autor>asfad</Autor>
+    </Autores>
+  </Publicacion>
+  <Publicacion>
+    <Articulo DOI="12.2SN2/NEO" />
+    <Titulo>asd</Titulo>
+    <Editorial>Victor</Editorial>
+    <Anho>172</Anho>
+    <PaginaIni>0</PaginaIni>
+    <PaginaFin>12</PaginaFin>
+    <Autores>
+      <Autor>pepe</Autor>
+      <Autor>asfad</Autor>
+    </Autores>
+  </Publicacion>
+</Publicaciones>

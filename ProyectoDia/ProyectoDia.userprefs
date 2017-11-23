@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{47A0FA19-9061-4F19-829E-F5B0F53E1607}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Proy_ImaTor/View/MainWindowCore.cs">
     <Files>
-      <File FileName="Proy_ImaTor/View/MainWindowView.cs" Line="23" Column="132" />
-      <File FileName="Proy_ImaTor/View/MainWindowCore.cs" Line="121" Column="89" />
-      <File FileName="Proy_ImaTor/ListaPublicaciones.cs" Line="30" Column="14" />
+      <File FileName="Proy_ImaTor/View/MainWindowView.cs" Line="202" Column="33" />
+      <File FileName="Proy_ImaTor/View/MainWindowCore.cs" Line="232" Column="13" />
+      <File FileName="Proy_ImaTor/ListaPublicaciones.cs" Line="117" Column="8" />
       <File FileName="Proy_ImaTor/Program.cs" Line="11" Column="6" />
       <File FileName="Proy_ImaTor/Congreso.cs" Line="17" Column="36" />
       <File FileName="Proy_ImaTor/Publicacion.cs" Line="1" Column="1" />
