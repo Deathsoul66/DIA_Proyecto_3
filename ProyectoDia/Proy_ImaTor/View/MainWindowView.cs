@@ -50,7 +50,7 @@ namespace Proy_ImaTor.View
 
             listaPublicacion.Clicked += AbrirXML;
             guardar.Clicked += GuardarXML;
-            nuevoPublicacion.Clicked += AñadirEntries;
+            nuevoPublicacion.Clicked += AñadirPublicacion;
 
 			tlb.Add(listaPublicacion);
 			tlb.Add(nuevoPublicacion);

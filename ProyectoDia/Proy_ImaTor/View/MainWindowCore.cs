@@ -92,7 +92,7 @@ namespace Proy_ImaTor.View
             }
             fc.Destroy();
         }
-        private void AñadirEntries(object sender, EventArgs e)
+        private void AñadirPublicacion(object sender, EventArgs e)
         {
 			Dialog d = new Dialog("Elige tipo de publicacion", this, DialogFlags.Modal, "Aceptar", Gtk.ResponseType.Accept,
 								  "Cancelar", Gtk.ResponseType.Cancel);
