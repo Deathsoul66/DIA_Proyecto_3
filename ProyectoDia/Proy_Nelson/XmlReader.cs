@@ -4,6 +4,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Proy_Nelson
 {
@@ -13,7 +14,7 @@ namespace Proy_Nelson
 		{
 			XElement XML = XElement.Load(filename);
 			List<string> autores = new List<string>();
-			var consulta = from Publicaciones in XML.Elements("Articulo")
+			var consulta = from Publicaciones in XML.Elements("Publicaciones")
 						   select Publicacion.Create(
 									  TipoPublicacion.Articulo,
 									  Convert.ToString(Publicaciones.Attribute("DOI").Value).Trim(),
@@ -23,6 +24,16 @@ namespace Proy_Nelson
 									  Convert.ToString(Publicaciones.Element("pagInicio").Value).Trim(),
 									  Convert.ToString(Publicaciones.Element("pagFin").Value).Trim(),
 														autores);
+			//foreach (XElement publi in XML.Elements("Publicaciones")){			//	Convert.ToString(publi.Element("DOI").Value.Trim()),
+			//	Convert.ToString(publi.Element("titulo").Value.Trim()),
+			//	Convert.ToString(publi.Element("editorial").Value.Trim()),
+			//	Convert.ToDateTime(publi.Element("anoPublicacion").Value.Trim()),
+			//	Convert.ToString(publi.Element("pagInicio").Value.Trim()),
+			//	Convert.ToString(publi.Element("pagFin").Value.Trim());
+			//	foreach (XElement autor in publi.Elements("Autores"){ 
+			//		Convert.ToString(autor.Element("Autor"),
+			//	}
+			//}
 		}
 
 
@@ -79,7 +90,7 @@ namespace Proy_Nelson
 									editorial = n1.InnerText.Trim();
 									break;
 								case "FechaPublicacion":
-									fechaPublicacion = (Convert.ToDateTime(n1.InnerText.Trim())).Date;
+												fechaPublicacion = DateTime.Parse(n1.InnerText.Trim(), new CultureInfo("es-ES"));
 									break;
 								case "PaginaIni":
 									pagInicio = n1.InnerText.Trim();
