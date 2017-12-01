@@ -1,16 +1,17 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
 namespace Proy_ImaTor
 {
-	class MainClass
-	{
+    using Proy_ImaTor.View;
+    class MainClass
+    {
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
-
-            DateTime d = new DateTime();
-            Console.WriteLine(d);
-
+			Gtk.Application.Init();
+			var win = new MainWindow();
+			win.ShowAll();
+			Gtk.Application.Run();
 		}
 	}
 }
