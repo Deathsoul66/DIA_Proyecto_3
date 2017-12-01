@@ -1,0 +1,16 @@
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\glib-sharp.dll
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\gtk-sharp.dll
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\pango-sharp.dll
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\atk-sharp.dll
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\gdk-sharp.dll
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\glib-sharp.pdb
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\pango-sharp.pdb
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\atk-sharp.pdb
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\gdk-sharp.pdb
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojResolveAssemblyReference.cache
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\DJlui\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
