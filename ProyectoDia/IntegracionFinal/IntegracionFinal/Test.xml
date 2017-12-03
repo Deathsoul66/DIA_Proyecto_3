@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Publicaciones>
+ <Publicacion>
+  <Libro DOI="453JHASGJHSADGASDG21">
+    <Titulo>La vida y la muerte de jose papito</Titulo>
+    <Editorial>JK.Patatas</Editorial>
+    <FechaPublicacion>05/05/2017</FechaPublicacion>
+    <PaginaIni>1</PaginaIni>
+    <PaginaFin>339</PaginaFin>
+    <Autores>
+      <Autor>El papaito sabrosongo</Autor>
+      <Autor>Bruce</Autor>
+      <Autor>Tony</Autor>
+    </Autores>
+  </Libro>
+ </Publicacion>
+
+ <Publicacion>
+  <Articulo DOI="65976509786597633563">
+    <Titulo>Panchi, me has jodido el test</Titulo>
+    <Editorial>Frankie M.</Editorial>
+    <FechaPublicacion>25/11/2017</FechaPublicacion>
+    <PaginaIni>18</PaginaIni>
+    <PaginaFin>19</PaginaFin>
+    <Autores>
+      <Autor>Virgen santa</Autor>
+      <Autor>Tony</Autor>
+      <Autor>RASputin</Autor>
+    </Autores>
+  </Articulo>
+ </Publicacion>
+
+ <Publicacion>
+  <Congreso DOI="98765465849486519799">
+    <Titulo>La vida, un misterio. La muerte, suceso seguro.</Titulo>
+    <Editorial>Planeta</Editorial>
+    <FechaPublicacion>01/11/2017</FechaPublicacion>
+    <PaginaIni>182</PaginaIni>
+    <PaginaFin>200</PaginaFin>
+    <Autores>
+      <Autor>Steve</Autor>
+      <Autor>Stark, Tony</Autor>
+    </Autores>
+    <Nombre>Anonymous</Nombre>
+    <Ciudad>Dontknow</Ciudad>
+    <Fecha>35/25/2301</Fecha>
+  </Congreso>
+ </Publicacion>
+</Publicaciones>
