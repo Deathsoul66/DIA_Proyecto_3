@@ -108,7 +108,7 @@ namespace IntegracionFinal
 			
 			modelo.Axes.Add(mesAxis);
 
-			PngExporter.Export(modelo, "plot", 600, 400, null);
+			PngExporter.Export(modelo, "plot", 600, 350, null);
 			Gdk.Pixbuf toRet = new Gdk.Pixbuf("plot");
 			return new Gtk.Image(toRet);
 

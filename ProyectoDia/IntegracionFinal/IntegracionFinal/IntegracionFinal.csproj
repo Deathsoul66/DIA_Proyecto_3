@@ -53,6 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ViewIntegradaFiltroController.cs" />
+    <Compile Include="Controladores\ViewIntegradaInformesController.cs" />
+    <Compile Include="Controladores\ViewIntegradaMiembrosController.cs" />
+    <Compile Include="Controladores\ViewIntregradaController.cs" />
     <Compile Include="Entidades\Articulo.cs" />
     <Compile Include="Entidades\Congreso.cs" />
     <Compile Include="Controladores\ViewFiltroPublicacionController.cs" />
@@ -62,17 +66,19 @@
     <Compile Include="Controladores\ViewMiembrosController.cs" />
     <Compile Include="Controladores\ViewPublicacionesGestionController.cs" />
     <Compile Include="Controladores\ViewInformesController.cs" />
-    <Compile Include="Vistas\MainWindowView.cs" />
-    <Compile Include="Vistas\MainWindowViewIMT.cs" />
+    <Compile Include="Controladores\ViewIntegradaPublicacionesController.cs" />
+    <Compile Include="Vistas\ViewGestionMiembros.cs" />
+    <Compile Include="Vistas\ViewGestionPublicaciones.cs" />
     <Compile Include="Entidades\Miembro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entidades\Publicacion.cs" />
     <Compile Include="Entidades\TipoPublicacion.cs" />
     <Compile Include="Vistas\ViewInformes.cs" />
-    <Compile Include="Vistas\MainWindowViewFiltroPublicaciones.cs" />
+    <Compile Include="Vistas\ViewFiltroPublicaciones.cs" />
     <Compile Include="Modelos\XmlReader.cs" />
     <Compile Include="Modelos\XmlWriter.cs" />
+    <Compile Include="Vistas\ViewIntegrada.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
