@@ -6,6 +6,10 @@ namespace IntegracionFinal
 {
     public partial class ViewIntegrada
     {
+        static string MIEMBROS = "TestMiembros.xml";
+        static string PUBLICACIONES = "Test.xml";
+
+
         void OnDelete(object obj, DeleteEventArgs args) { Application.Quit(); }
 
         void OnMenuSalirActivated(object sender, EventArgs e)
@@ -17,9 +21,10 @@ namespace IntegracionFinal
         void OnMenuAboutActivated(object sender, EventArgs e)
         {
             AboutDialog about = new AboutDialog();
+            about.SetPosition(WindowPosition.Center);
             about.SetIconFromFile(".\\imagenes\\icon.png");
             about.ProgramName = "Integracion";
-            about.Version = "0.0.0";
+            about.Version = "0.1.1";
             about.Copyright = "(c) Universidade de Vigo";
             about.Comments = @"Integracion is a simple solution proyect for DIA @ ESEI";
             about.Website = "integracion.fake.web";

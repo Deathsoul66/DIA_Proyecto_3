@@ -51,7 +51,7 @@ namespace IntegracionFinal
                         autores.Add(autor.Trim());
                     }
                     Publicacion p;
-                    listaP = XmlReader.leerPublicaciones("Test.xml");
+                    listaP = XmlReader.leerPublicaciones(PUBLICACIONES);
 
                     try
                     {
@@ -84,13 +84,14 @@ namespace IntegracionFinal
                                 }
                                 break;
                         }
+                        XmlWriter.GuardarXmlPublicaciones(PUBLICACIONES, listaP.listPub);
                     }
                     catch
                     {
                         Error("Error al insertar");
                     }
                 }
-                XmlWriter.GuardarXmlPublicaciones("Test.xml", listaP.listPub);
+               
                 d1.Destroy();
             }
             else
@@ -99,6 +100,10 @@ namespace IntegracionFinal
             }
         }
 
+        private void MenuPublicacionesActivate(object o, EventArgs args) {
+            subMenuDeletePublicacion.Sensitive = true;
+            subMenuEditPublicacion.Sensitive = true;
+        }
 
         private void UpdatePublicacion(object o, RowActivatedArgs args)
         {
@@ -137,7 +142,7 @@ namespace IntegracionFinal
                     autores.Add(autor.Trim());
                 }
                 Publicacion p;
-                listaP = XmlReader.leerPublicaciones("Test.xml");
+                listaP = XmlReader.leerPublicaciones(PUBLICACIONES);
                 try
                 {
                     switch (entTipo.Text)
@@ -169,6 +174,7 @@ namespace IntegracionFinal
                             }
                             break;
                     }
+                    XmlWriter.GuardarXmlPublicaciones(PUBLICACIONES, listaP.listPub);
                 }
                 catch
                 {
@@ -181,6 +187,7 @@ namespace IntegracionFinal
                 if (listaP.Eliminar(entDOI.Text))
                 {
                     store.Remove(ref lastIter);
+                    XmlWriter.GuardarXmlPublicaciones(PUBLICACIONES, listaP.listPub);
                 }
                 else
                 {
@@ -188,7 +195,6 @@ namespace IntegracionFinal
                 }
                 //statusbar.Push(0, row);
             }
-            XmlWriter.GuardarXmlPublicaciones("Test.xml", listaP.listPub);
             d.Destroy();
         }
 
@@ -202,8 +208,6 @@ namespace IntegracionFinal
             VBox right2 = new VBox(false, 3);
             VBox left3 = new VBox(false, 3);
             VBox right3 = new VBox(false, 3);
-
-
 
             Label lblTipo = new Label("Tipo de Publicacion: ");
             lblTipo.Xalign = 1;
@@ -249,6 +253,14 @@ namespace IntegracionFinal
             left.PackStart(lblAutores);
             right.PackStart(entAutores);
 
+            Label lblAutoresComA = new Label("Formato autores: ");
+            Label lblAutoresComB = new Label("N.Apellido, N.Apellido... ");
+            lblAutoresComA.Xalign = 1;
+            lblAutoresComA.Yalign = 1;
+            lblAutoresComB.Xalign = 0;
+            right.PackStart(lblAutoresComB);
+            left.PackStart(lblAutoresComA);
+
             if (tipo.Equals("Congreso"))
             {
                 Label lblNombre = new Label("Nombre Congreso: ");
@@ -265,10 +277,7 @@ namespace IntegracionFinal
                 lblFecha.Xalign = 1;
                 left2.PackStart(lblFecha);
                 right2.PackStart(entFecha);
-
-
             }
-
 
             hbox.Add(left);
             hbox.Add(right);
@@ -287,7 +296,7 @@ namespace IntegracionFinal
 
         private ComboBox TipoPublicacion()
         {
-            return new ComboBox(new string[] { "Articulo", "Congreso", "Libro" }); ;
+            return new ComboBox(new string[] { "Articulo", "Congreso", "Libro" });
         }
 
         private void OnlyNumber(object obj, TextInsertedArgs tia)

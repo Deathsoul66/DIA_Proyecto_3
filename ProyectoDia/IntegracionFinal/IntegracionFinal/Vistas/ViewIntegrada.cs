@@ -6,13 +6,17 @@ namespace IntegracionFinal
 {
     public partial class ViewIntegrada : Window
     {
-
         //GLOBAL SECTION
         Box vbox;
         HBox hbox;
 
         private ListaPublicacion listaP;
         private List<Miembro> listaM;
+
+        MenuItem subMenuEditMiembro;
+        MenuItem subMenuDeleteMiembro;
+        MenuItem subMenuEditPublicacion;
+        MenuItem subMenuDeletePublicacion;
 
         public ViewIntegrada() : base("Integracion - DIA")
         {
@@ -23,32 +27,78 @@ namespace IntegracionFinal
             SetIconFromFile(".\\imagenes\\icon.png");
             //SYSTEM EVENTS
             DeleteEvent += OnDelete;
+
             //VERTICAL BOXs
             vbox = new VBox(false, 2);
             //HORIZONTAL BOXs
             hbox = new HBox(false, 2);
             //READ PUBLICACIONES
-            this.listaP = XmlReader.leerPublicaciones("Test.xml");
+            this.listaP = XmlReader.leerPublicaciones(PUBLICACIONES);
             //READ MIEMBROS
-            this.listaM = XmlReader.leerMiembros("TestMiembros.xml");
+            this.listaM = XmlReader.leerMiembros(MIEMBROS);
 
             //VIEW ELEMENTS
 
             // = MENU =
             ///////////****************************************************************////////////// Menu_I_Section
             MenuBar barraMenu = new MenuBar();
-            MenuItem test = new MenuItem("Publicaciones");
-            MenuItem infMensual = new MenuItem("Miembros");
-            MenuItem infAnualDep = new MenuItem("Informes");
-            MenuItem about = new MenuItem("Acerca de");
-            MenuItem salir = new MenuItem("Salir");
+            MenuItem menuPublicaciones = new MenuItem("Publicaciones");
+            MenuItem menuMiembros = new MenuItem("Miembros");
+            MenuItem menuInformes = new MenuItem("Informes");
+            MenuItem menuAbout = new MenuItem("Acerca de");
+            MenuItem menuSalir = new MenuItem("Salir");
 
-            barraMenu.Append(test);
-            barraMenu.Append(infMensual);
-            barraMenu.Append(infAnualDep);
-            barraMenu.Append(about);
-            barraMenu.Append(salir);
+            ///////////*********************************////////////// SubMenus_I_Section
+
+            ////////// - Publicaciones -
+            //Creamos el submenu
+            Menu pubsSubMenu = new Menu();
+            //Elementos para el submenu
+            MenuItem subMenuAddPublicacion = new MenuItem("Añadir publicación");
+            subMenuEditPublicacion = new MenuItem("Editar publicación");
+            subMenuDeletePublicacion = new MenuItem("Eliminar publicación");
+            //Añadimos estos elementos al submenu
+            pubsSubMenu.Append(subMenuAddPublicacion);
+            //pubsSubMenu.Append(subMenuEditPublicacion);
+            //pubsSubMenu.Append(subMenuDeletePublicacion);
+            //Añadimos el submenú al "Button" del menu principal
+            menuPublicaciones.Submenu = pubsSubMenu;
+            
+            ////////// - Miembros -
+            //Creamos el submenu
+            Menu miembSubMenu = new Menu();
+            //Elementos para el submenu
+            MenuItem subMenuAddMiembro = new MenuItem("Añadir miembro");
+            subMenuEditMiembro = new MenuItem("Editar miembro");
+            subMenuDeleteMiembro = new MenuItem("Eliminar miembro");
+            //Añadimos estos elementos al submenu
+            miembSubMenu.Append(subMenuAddMiembro);
+            //miembSubMenu.Append(subMenuEditMiembro);
+            //miembSubMenu.Append(subMenuDeleteMiembro);
+            //Añadimos el submenú al "Button" del menu principal
+            menuMiembros.Submenu = miembSubMenu;
+            
+            ////////// - Informes -
+            //Creamos el submenu
+            Menu informesSubMenu = new Menu();
+            //Elementos para el submenu
+            MenuItem subMenuMeritosDepartamento = new MenuItem("Ver méritos departamento");
+            MenuItem subMenuMeritosMiembro = new MenuItem("Ver méritos miembro");
+            //Añadimos estos elementos al submenu
+            informesSubMenu.Append(subMenuMeritosDepartamento);
+            informesSubMenu.Append(subMenuMeritosMiembro);
+            //Añadimos el submenú al "Button" del menu principal
+            menuInformes.Submenu = informesSubMenu;
+            
+            ///////////**********************************////////////// SubMenus_E_Section
+
+            barraMenu.Append(menuPublicaciones);
+            barraMenu.Append(menuMiembros);
+            barraMenu.Append(menuInformes);
+            barraMenu.Append(menuAbout);
+            barraMenu.Append(menuSalir);
             ///////////****************************************************************////////////// Menu_E_Section
+           
             ///////////****************************************************************////////////// Filtro_I_Section
             //VIEW FILTRO
 
@@ -62,6 +112,7 @@ namespace IntegracionFinal
             VBox pnlButton1 = new VBox(false, 5);
             VBox pnlButton2 = new VBox(false, 5);
             VBox pnlButton3 = new VBox(false, 5);
+            VBox pnlButton4 = new VBox(false, 5);
 
             HBox pnlBuscador = new HBox(false, 5);
 
@@ -100,10 +151,15 @@ namespace IntegracionFinal
             full.SetSizeRequest(90, 20);
             pnlButton2.PackStart(full, false, false, 5);
 
-            Button anhadir = new Button("Añadir");
+            Button anhadir = new Button("Añadir Publicacion");
             anhadir.Clicked += AñadirPublicacion;
-            anhadir.SetSizeRequest(50, 20);
-            pnlButton3.PackStart(anhadir, false, false, 5);
+            anhadir.SetSizeRequest(110, 20);
+            //pnlButton3.PackStart(anhadir, false, false, 5);
+
+            Button anhadir2 = new Button("Añadir Miembro");
+            anhadir2.Clicked += AñadirMiembro;
+            anhadir2.SetSizeRequest(100, 20);
+            //pnlButton4.PackStart(anhadir2, false, false, 5);
 
             pnlBuscador.PackStart(pnlAutor, false, false, 5);
             pnlBuscador.PackStart(pnlAnho, false, false, 5);
@@ -111,6 +167,8 @@ namespace IntegracionFinal
             pnlBuscador.PackStart(pnlButton1, false, false, 5);
             pnlBuscador.PackStart(pnlButton2, false, false, 5);
             pnlBuscador.PackStart(pnlButton3, false, false, 5);
+            pnlBuscador.PackStart(pnlButton4, false, false, 5);
+
 
 
             //VBox vbox = new VBox(false, 8);
@@ -123,8 +181,8 @@ namespace IntegracionFinal
             store = CreateModel();
 
             this.treeView = new TreeView(store);
-            this.treeView.RulesHint = true;
-            //this.treeView.RowActivated += OnRowActivated;
+            //this.treeView.RulesHint = true; //Para el sombreado de lineas pares
+            this.treeView.Selection.Changed += MenuPublicacionesActivate;
             this.treeView.RowActivated += UpdatePublicacion;
             this.sw.Add(treeView);
 
@@ -146,8 +204,9 @@ namespace IntegracionFinal
             HBox menuMerDepartamento = new HBox();
             HBox selectorMerDepartamento = new HBox();
             Button btnConsultarMerDepartamento = new Button("Consultar");
-            txtEntryAnioDep = new Entry();
-
+            txtEntryAnioDep = new ComboBoxEntry(this.getAniosPublicaciones()); 
+            txtEntryAnioDep.Active = 0; //Seleccionado el último año
+            
             selectorMerDepartamento.PackStart(lbAnio, false, false, 20);
             selectorMerDepartamento.PackStart(txtEntryAnioDep, false, false, 5);
             menuMerDepartamento.PackStart(selectorMerDepartamento, false, false, 10);
@@ -166,15 +225,25 @@ namespace IntegracionFinal
             //ADD TO SHOW
             Add(vbox);
 
+            //Inicializar grafica
+            onBtnConsultMerDepClicked(this, null);
+
             //SHOW INITIAL VIEW
             ShowAll();
 
             //EVENTS
-            about.ButtonPressEvent += OnMenuAboutActivated;
-            salir.ButtonPressEvent += OnMenuSalirActivated;
-            //test.ButtonPressEvent += OnMenuTestActivated;
-            //infMensual.ButtonPressEvent += OnMenuInfMerMiembroMensualActivated;
+            menuAbout.ButtonPressEvent += OnMenuAboutActivated;
+            menuSalir.ButtonPressEvent += OnMenuSalirActivated;
             btnConsultarMerDepartamento.Clicked += onBtnConsultMerDepClicked;
+            subMenuAddPublicacion.ButtonPressEvent += AñadirPublicacion;
+            subMenuAddMiembro.ButtonPressEvent += AñadirMiembro;
+            //subMenuDeleteMiembro.Sensitive = false;
+            //subMenuDeletePublicacion.Sensitive = false;
+            //subMenuEditMiembro.Sensitive = false;
+            //subMenuEditPublicacion.Sensitive = false;
+            //subMenuEditMiembro.ButtonPressEvent += EditarMiembro;
+            subMenuMeritosDepartamento.ButtonPressEvent += btnConsultarMerAnioClicked;
+            subMenuMeritosMiembro.ButtonPressEvent += onBtnConsultarMerMiembroMesesClicked;
         }
     }
 }

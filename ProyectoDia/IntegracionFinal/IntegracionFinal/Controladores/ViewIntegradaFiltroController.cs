@@ -32,20 +32,21 @@ namespace IntegracionFinal
 
         private void OnClickBuscar(object o, EventArgs e)
         {
-            this.vbox.Remove(this.sw);
+            //this.vbox.Remove(this.sw);
             this.sw.Remove(this.treeView);
             this.treeView.Destroy();
 
-            this.listaP = new ListaPublicacion();
-            ListaPublicacion listaFilt = XmlReader.leerPublicaciones("Test.xml");
+            //this.listaP = new ListaPublicacion();
+            ListaPublicacion listaFilt = XmlReader.leerPublicaciones(PUBLICACIONES);
             this.listaP = XmlReader.filtrarListaPublicaciones(listaFilt, this.Autor, this.Anho, this.Tipo);
 
             this.treeView = new TreeView(this.CreateModel());
-            this.treeView.RulesHint = true;
+            //this.treeView.RulesHint = true;  //Para el sombreado de lineas pares
             this.AddColumns();
             this.sw.Add(this.treeView);
-            this.vbox.PackStart(this.sw, true, true, 0); //LISTAR
+            //this.vbox.PackStart(this.sw, true, true, 0); //LISTAR
             this.treeView.RowActivated += UpdatePublicacion;
+            this.treeView.SelectCursorRow += OnMenuAboutActivated;
             this.ShowAll();
 
         }
@@ -53,18 +54,18 @@ namespace IntegracionFinal
         private void OnClickFull(object o, EventArgs e)
         {
 
-            this.vbox.Remove(this.sw);
+            //this.vbox.Remove(this.sw);
             this.sw.Remove(this.treeView);
             this.treeView.Destroy();
 
-            this.listaP = new ListaPublicacion();
-            this.listaP = XmlReader.leerPublicaciones("Test.xml");
+            //this.listaP = new ListaPublicacion();
+            this.listaP = XmlReader.leerPublicaciones(PUBLICACIONES);
 
             this.treeView = new TreeView(this.CreateModel());
-            this.treeView.RulesHint = true;
+            //this.treeView.RulesHint = true;  //Para el sombreado de lineas pares
             this.AddColumns();
             this.sw.Add(this.treeView);
-            this.vbox.PackStart(this.sw, true, true, 0); //LISTAR
+            //this.vbox.PackStart(this.sw, true, true, 0); //LISTAR
             this.treeView.RowActivated += UpdatePublicacion;
             this.ShowAll();
 
@@ -177,6 +178,7 @@ namespace IntegracionFinal
                 }
                 store.AppendValues(p.getTipo(), p.DOI, p.Titulo, p.Editorial, p.FechaPublicacion.ToString("dd/MM/yyyy"), p.PagInicio, p.PagFin, p.autoresToString(), p.getNombre(), p.getCiudad(), p.getFecha());
             }
+
 
             return store;
         }

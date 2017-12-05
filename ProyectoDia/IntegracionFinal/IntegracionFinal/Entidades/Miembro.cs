@@ -33,9 +33,9 @@ namespace IntegracionFinal
 								 "DIRECCION= " + direccion + "\n");
 		}
 
-		public bool checkMiembro(String apellidosName)
+		public bool checkMiembro(String namePointApellido)
 		{
-			return string.Format(this.apellidos + ", " + this.nombre).Equals(apellidosName) ? true : false;
+			return string.Format(this.nombre[0] + "." + this.apellidos.Split(' ')[0]).Equals(namePointApellido) ? true : false;
 		}
 	}
 }

@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Publicaciones>
   <Publicacion>
-    <Libro DOI="453JHASGJH">
+    <Libro DOI="165.981/987">
       <Titulo>La vida y la muerte de jose papito</Titulo>
       <Editorial>JK.Patatas</Editorial>
       <FechaPublicacion>05/05/2017</FechaPublicacion>
       <PaginaIni>1</PaginaIni>
       <PaginaFin>339</PaginaFin>
       <Autores>
-        <Autor>El papaito sabrosongo</Autor>
-        <Autor>Bruce</Autor>
-        <Autor>Tony</Autor>
+        <Autor>T.Stark</Autor>
+        <Autor>B.Banner</Autor>
+        <Autor>N.Martinez</Autor>
       </Autores>
     </Libro>
   </Publicacion>
   <Publicacion>
-    <Articulo DOI="65976509786597633563">
-      <Titulo>Panchi, me has jodido el test</Titulo>
+    <Articulo DOI="659.765/097">
+      <Titulo>El test</Titulo>
       <Editorial>Frankie M.</Editorial>
       <FechaPublicacion>25/11/2014</FechaPublicacion>
       <PaginaIni>18</PaginaIni>
       <PaginaFin>19</PaginaFin>
       <Autores>
-        <Autor>Virgen santa</Autor>
-        <Autor>Tony</Autor>
-        <Autor>RASputin</Autor>
+        <Autor>V.Santa</Autor>
+        <Autor>T.Stark</Autor>
+        <Autor>V.Putin</Autor>
       </Autores>
     </Articulo>
   </Publicacion>
   <Publicacion>
-    <Congreso DOI="98765465849486519799">
+    <Congreso DOI="987.465/485">
       <Titulo>La vida, un misterio. La muerte, suceso seguro.</Titulo>
       <Editorial>Planeta</Editorial>
       <FechaPublicacion>01/11/2016</FechaPublicacion>
@@ -37,22 +37,63 @@
       <PaginaFin>200</PaginaFin>
       <Nombre>Anonymous</Nombre>
       <Ciudad>Dontknow</Ciudad>
-      <Fecha>15/05/2001</Fecha>
+      <Fecha>16/03/2017</Fecha>
       <Autores>
-        <Autor>Steve</Autor>
-        <Autor>Stark, Tony</Autor>
+        <Autor>S.Rogers</Autor>
+        <Autor>T.Stark</Autor>
       </Autores>
     </Congreso>
   </Publicacion>
   <Publicacion>
     <Articulo DOI="123.1234/123">
-      <Titulo>Libro Prueba1</Titulo>
-      <Editorial>Planeta</Editorial>
+      <Titulo>Prueba1</Titulo>
+      <Editorial>CSM</Editorial>
       <FechaPublicacion>06/12/2017</FechaPublicacion>
       <PaginaIni>1</PaginaIni>
-      <PaginaFin>135</PaginaFin>
+      <PaginaFin>13</PaginaFin>
       <Autores>
-        <Autor>Autor1</Autor>
+        <Autor>A.Autor</Autor>
+        <Autor>S.Rogers</Autor>
+      </Autores>
+    </Articulo>
+  </Publicacion>
+  <Publicacion>
+    <Libro DOI="983.475/623">
+      <Titulo>El Libraco</Titulo>
+      <Editorial>Anaya</Editorial>
+      <FechaPublicacion>04/12/2017</FechaPublicacion>
+      <PaginaIni>1</PaginaIni>
+      <PaginaFin>480</PaginaFin>
+      <Autores>
+        <Autor>M.Paz</Autor>
+        <Autor>N.Martinez</Autor>
+        <Autor>T.Stark</Autor>
+      </Autores>
+    </Libro>
+  </Publicacion>
+  <Publicacion>
+    <Articulo DOI="654.321/945">
+      <Titulo>Undef, un exito</Titulo>
+      <Editorial>J-Verne</Editorial>
+      <FechaPublicacion>10/12/2015</FechaPublicacion>
+      <PaginaIni>1</PaginaIni>
+      <PaginaFin>47</PaginaFin>
+      <Autores>
+        <Autor>S.Rogers</Autor>
+      </Autores>
+    </Articulo>
+  </Publicacion>
+  <Publicacion>
+    <Articulo DOI="523.746/324">
+      <Titulo>Test sin miembros</Titulo>
+      <Editorial>Random</Editorial>
+      <FechaPublicacion>05/12/2011</FechaPublicacion>
+      <PaginaIni>1</PaginaIni>
+      <PaginaFin>123</PaginaFin>
+      <Autores>
+        <Autor>N.Nobody</Autor>
+        <Autor>M.Nobody</Autor>
+        <Autor>N.Nadie</Autor>
       </Autores>
     </Articulo>
   </Publicacion>
