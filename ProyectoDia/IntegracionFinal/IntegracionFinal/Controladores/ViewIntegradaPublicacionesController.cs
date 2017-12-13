@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -218,6 +218,12 @@ namespace IntegracionFinal
 
             Label lblDOI = new Label("DOI: ");
             lblDOI.Xalign = 1;
+            if (tipo.Equals("Congreso")){
+                lblDOI.SetPadding(0, 0);
+            } else {
+                lblDOI.SetPadding(0, 5);
+            }
+                
             left.PackStart(lblDOI);
             right.PackStart(entDOI);
 
@@ -248,18 +254,6 @@ namespace IntegracionFinal
             right.PackStart(entPFin);
             entPFin.TextInserted += OnlyNumber;
 
-            Label lblAutores = new Label("Autores: ");
-            lblAutores.Xalign = 1;
-            left.PackStart(lblAutores);
-            right.PackStart(entAutores);
-
-            Label lblAutoresComA = new Label("Formato autores: ");
-            Label lblAutoresComB = new Label("N.Apellido, N.Apellido... ");
-            lblAutoresComA.Xalign = 1;
-            lblAutoresComA.Yalign = 1;
-            lblAutoresComB.Xalign = 0;
-            right.PackStart(lblAutoresComB);
-            left.PackStart(lblAutoresComA);
 
             if (tipo.Equals("Congreso"))
             {
@@ -279,6 +273,33 @@ namespace IntegracionFinal
                 right2.PackStart(entFecha);
             }
 
+            Label lblAutores = new Label("Autores: ");
+            lblAutores.Xalign = 1;
+            left.PackStart(lblAutores);
+            entAutores.TooltipText = "Formato autores: N.Apellido, N.Apellido...";
+            right.PackStart(entAutores);
+
+
+            Label lblMiembros = new Label("Añadir Miembros: ");
+            lblMiembros.Xalign = 1;
+            left.PackStart(lblMiembros);
+
+            var arrayM = listaM.Select(x => x.nombre + " " + x.apellidos).ToArray();
+            
+            ComboBox cbMiembros = new ComboBox(arrayM);
+            cbMiembros.InsertText(0, "Selecciona un miembro para añadir");
+            cbMiembros.Active = 0;
+            cbMiembros.Changed += addMiembroToAutores;
+            right.PackStart(cbMiembros);
+
+            /*Label lblAutoresComA = new Label("Formato autores: ");
+            Label lblAutoresComB = new Label("N.Apellido, N.Apellido... ");
+            lblAutoresComA.Xalign = 1;
+            lblAutoresComA.Yalign = 1;
+            lblAutoresComB.Xalign = 0;
+            right.PackStart(lblAutoresComB);
+            left.PackStart(lblAutoresComA);*/
+
             hbox.Add(left);
             hbox.Add(right);
             vboxCal.Add(left3);
@@ -294,10 +315,25 @@ namespace IntegracionFinal
             return alignment;
         }
 
+        private void addMiembroToAutores(object sender, EventArgs e)
+        {
+            
+            string text = ((ComboBox)sender).ActiveText;
+            if (!text.Equals("Selecciona un miembro para añadir")) {
+                var aut = listaM.Where(x=> (x.nombre + " " + x.apellidos).Equals(text)).ToList();
+
+                entAutores.Text = entAutores.Text + ", " + aut[0].nombre.Substring(0,1) + ". " + aut[0].apellidos;
+                ((ComboBox)sender).Active = 0;
+            }
+           
+
+        }
+
         private ComboBox TipoPublicacion()
         {
-            return new ComboBox(new string[] { "Articulo", "Congreso", "Libro" });
+            return new ComboBox(new string[] { "", "Articulo", "Congreso", "Libro" });
         }
+
 
         private void OnlyNumber(object obj, TextInsertedArgs tia)
         {
