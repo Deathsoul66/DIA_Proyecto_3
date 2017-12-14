@@ -338,7 +338,7 @@ namespace IntegracionFinal
 
         private ComboBox TipoPublicacion()
         {
-            return new ComboBox(new string[] { "", "Articulo", "Congreso", "Libro" });
+            return new ComboBox(new string[] { "Articulo", "Congreso", "Libro" });
         }
 
 
