@@ -97,4 +97,44 @@
       </Autores>
     </Articulo>
   </Publicacion>
+  <Publicacion>
+    <Articulo DOI="67467567">
+      <Titulo>dtyteryrt</Titulo>
+      <Editorial>tryrty</Editorial>
+      <FechaPublicacion>25/11/2014</FechaPublicacion>
+      <PaginaIni>5</PaginaIni>
+      <PaginaFin>56</PaginaFin>
+      <Autores>
+        <Autor></Autor>
+        <Autor>S. Rogers</Autor>
+        <Autor>B. Banner</Autor>
+      </Autores>
+    </Articulo>
+  </Publicacion>
+  <Publicacion>
+    <Articulo DOI="45645">
+      <Titulo>ghutgyu</Titulo>
+      <Editorial>gyjgyj</Editorial>
+      <FechaPublicacion>14/12/2017</FechaPublicacion>
+      <PaginaIni>1</PaginaIni>
+      <PaginaFin>2</PaginaFin>
+      <Autores>
+        <Autor></Autor>
+        <Autor>S. Rogers</Autor>
+        <Autor>T. Stark</Autor>
+      </Autores>
+    </Articulo>
+  </Publicacion>
+  <Publicacion>
+    <Articulo DOI="5345">
+      <Titulo>wert</Titulo>
+      <Editorial>wert</Editorial>
+      <FechaPublicacion>14/12/2017</FechaPublicacion>
+      <PaginaIni>4</PaginaIni>
+      <PaginaFin>45</PaginaFin>
+      <Autores>
+        <Autor>S. Rogers</Autor>
+      </Autores>
+    </Articulo>
+  </Publicacion>
 </Publicaciones>

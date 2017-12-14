@@ -321,8 +321,15 @@ namespace IntegracionFinal
             string text = ((ComboBox)sender).ActiveText;
             if (!text.Equals("Selecciona un miembro para añadir")) {
                 var aut = listaM.Where(x=> (x.nombre + " " + x.apellidos).Equals(text)).ToList();
-
-                entAutores.Text = entAutores.Text + ", " + aut[0].nombre.Substring(0,1) + ". " + aut[0].apellidos;
+                if (!entAutores.Text.Contains(aut[0].nombre.Substring(0, 1) + "." + aut[0].apellidos)) { 
+                    if (entAutores.Text == "")
+                    {
+                        entAutores.Text += aut[0].nombre.Substring(0, 1) + "." + aut[0].apellidos;
+                    }
+                    else { 
+                        entAutores.Text = entAutores.Text + "," + aut[0].nombre.Substring(0,1) + "." + aut[0].apellidos;
+                    }
+                }
                 ((ComboBox)sender).Active = 0;
             }
            
