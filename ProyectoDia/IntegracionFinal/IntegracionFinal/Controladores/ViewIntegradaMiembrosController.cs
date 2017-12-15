@@ -23,6 +23,7 @@ namespace IntegracionFinal
 
         private enum ColumnMiembro { Id, Dni, Nombre, Apellidos, Telefono, Email, Direccion};
 
+        //Metodo para insertar los datos de los miembros en la listStore
         private void InsertaDatos()
         {
             cont = 1;
@@ -33,6 +34,7 @@ namespace IntegracionFinal
             }
         }
 
+        //Metodo para construir la tabla de miembros
         private ScrolledWindow BuildTable()
         {
 
@@ -95,8 +97,7 @@ namespace IntegracionFinal
             InsertaDatos();
             tvDatos.Model = ls;
             tvDatos.RowActivated += UpdateMiembro;
-            tvDatos.Selection.Changed += MenuMiembrosActivate;
-
+            
             ScrolledWindow sw = new ScrolledWindow();
 
             sw.Add(tvDatos);
@@ -105,6 +106,7 @@ namespace IntegracionFinal
             return sw;
         }
 
+        //Funcion para añadir un nuevo miembro (Se muestra en una ventana Modal)
         private void AñadirMiembro(object sender, EventArgs e)
         {
             
@@ -138,13 +140,7 @@ namespace IntegracionFinal
            
         }
 
-        private void EditarMiembro(object sender, EventArgs e) {
-            Dialog d = new Dialog("Modifica Publicacion", this, DialogFlags.Modal, "Actualizar", Gtk.ResponseType.Accept,
-                                   "Eliminar", Gtk.ResponseType.None, "Cancelar", Gtk.ResponseType.Cancel);
-            d.ShowAll();
-            d.Run();
-        }
-
+        //Funcion para actualizar los datos de un miembro (Se muestra en una venta modal)
         private void UpdateMiembro(object o, RowActivatedArgs args)
         {
             Dialog d = new Dialog("Modifica Publicacion", this, DialogFlags.Modal, "Actualizar", Gtk.ResponseType.Accept,
@@ -199,18 +195,17 @@ namespace IntegracionFinal
                 {
                     Error("No se pudo eliminar la entrada!");
                 }
-                //statusbar.Push(0, row);
             }
             
             d.Destroy();
         }
 
+        //Funcion para colocar los elementos en la vista
         private Alignment CrearBotonesMiembros(string num)
         {
             VBox left = new VBox(false, 3);
             VBox right = new VBox(false, 3);
             HBox hbox = new HBox(false, 5);
-
 
             Label lblNum = new Label("Num: ");
             lblNum.Xalign = 1;
@@ -257,11 +252,6 @@ namespace IntegracionFinal
             alignment.Add(hbox);
 
             return alignment;
-        }
-        private void MenuMiembrosActivate(object o, EventArgs args)
-        {
-            subMenuDeleteMiembro.Sensitive = true;
-            subMenuEditMiembro.Sensitive = true;
         }
     }
 }  

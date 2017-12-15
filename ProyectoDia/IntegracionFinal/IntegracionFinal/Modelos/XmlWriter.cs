@@ -9,6 +9,7 @@ namespace IntegracionFinal
 {
     class XmlWriter
     {
+        //Funcion para guardar los miembros en el archivo XML
         public static void GuardarXmlMiembros(string fileroute, List<Miembro> listaMiembros)
         {
             XElement raiz = new XElement("Miembros");
@@ -27,7 +28,7 @@ namespace IntegracionFinal
 
             new XDocument(raiz).Save(fileroute);
         }
-   
+        //Funcion para guardar las publicaciones en el archivo XML
         public static void GuardarXmlPublicaciones(string ruta, List<Publicacion> listaPublicaciones)
         {
             XElement raiz = new XElement("Publicaciones");

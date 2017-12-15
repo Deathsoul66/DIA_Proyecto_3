@@ -11,10 +11,6 @@ namespace IntegracionFinal
     public partial class ViewIntegrada
     {
         private TreeIter lastIter;
-
-        //private Toolbar tlb;
-        //private TreeView mainTree = new TreeView();
-        //private ScrolledWindow scrWin = new ScrolledWindow();
         private Entry entTipo = new Entry();
         private Entry entDOI = new Entry();
         private Entry entTitulo = new Entry();
@@ -24,7 +20,6 @@ namespace IntegracionFinal
         private Entry entPFin = new Entry();
         private Entry entNombre = new Entry();
         private Entry entCiudad = new Entry();
-        //private Entry entFecha = new Entry();
         private Calendar entFecha = new Calendar();
         private Entry entAutores = new Entry();
 
@@ -175,6 +170,7 @@ namespace IntegracionFinal
                             break;
                     }
                     XmlWriter.GuardarXmlPublicaciones(PUBLICACIONES, listaP.listPub);
+                    
                 }
                 catch
                 {
@@ -193,7 +189,6 @@ namespace IntegracionFinal
                 {
                     Error("No se pudo eliminar la entrada!");
                 }
-                //statusbar.Push(0, row);
             }
             d.Destroy();
         }
@@ -291,14 +286,6 @@ namespace IntegracionFinal
             cbMiembros.Active = 0;
             cbMiembros.Changed += addMiembroToAutores;
             right.PackStart(cbMiembros);
-
-            /*Label lblAutoresComA = new Label("Formato autores: ");
-            Label lblAutoresComB = new Label("N.Apellido, N.Apellido... ");
-            lblAutoresComA.Xalign = 1;
-            lblAutoresComA.Yalign = 1;
-            lblAutoresComB.Xalign = 0;
-            right.PackStart(lblAutoresComB);
-            left.PackStart(lblAutoresComA);*/
 
             hbox.Add(left);
             hbox.Add(right);

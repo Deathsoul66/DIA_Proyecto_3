@@ -9,8 +9,12 @@ using OxyPlot.Axes;
 
 namespace IntegracionFinal
 {
+    /***
+     * Esta clase se encarga de generar los gráficos necesarios para los informes.
+     */
 	public class Grafico
 	{
+        //Ejemplo para un gráfico de tipo tarta
 		public static Gtk.Image GraficoPieExample()
 		{
 			var model = new PlotModel();//("World population by continent");
@@ -35,7 +39,7 @@ namespace IntegracionFinal
 			Gdk.Pixbuf a = new Gdk.Pixbuf("plot");
 			return new Gtk.Image(a);
 		}
-
+        //Ejemplo para un gráfico de barras
 		public static Gtk.Image GraficoBarrasExample()
 		{
 
@@ -75,15 +79,23 @@ namespace IntegracionFinal
 			Gdk.Pixbuf a = new Gdk.Pixbuf("plot");
 			return new Gtk.Image(a);
 		}
-
+        /***
+         * Esta funcion recibe:
+         *   (String)nombreMiembro <- El nombre del autor miembro del departamento
+         *   (int[])values <- Un array de 12 posiciones con todos los valores para un año en cuestion
+         *   (int)year <- El año a consultar
+         *   
+         *  Devuelve:
+         *    Gtk.Image <- Una imagen con el gráfico generado
+         */
 		public static Gtk.Image merMiembroMes(string nombreMiembro, int[] values, int year)
 		{
-
+            //Se inicializa el modelo con un título
 			var modelo = new PlotModel
 			{
 				Title = "Méritos para " + nombreMiembro + " en " + Convert.ToString(year)
 			};
-
+            //Para cada valor en el array recibido se añade su valor a una nueva columna (grafico de barras)
 			var c1 = new ColumnSeries();
 			foreach (int valor in values)
 			{
@@ -91,9 +103,9 @@ namespace IntegracionFinal
 			}
 			modelo.Series.Add(c1);
 
+            //Se especifican los valores del eje X (El eje Y tiene un valor numérico que se modifica de forma dinámica)
 			var mesAxis = new CategoryAxis { Position = AxisPosition.Bottom };
-
-			mesAxis.Labels.Add("Enero");
+            mesAxis.Labels.Add("Enero");
 			mesAxis.Labels.Add("Febrero");
 			mesAxis.Labels.Add("Marzo");
 			mesAxis.Labels.Add("Abril");
@@ -105,9 +117,9 @@ namespace IntegracionFinal
 			mesAxis.Labels.Add("Octubre");
 			mesAxis.Labels.Add("Novi.");
 			mesAxis.Labels.Add("Diciembre");
-			
 			modelo.Axes.Add(mesAxis);
 
+            //Genera el modelo y lo exporta a una imagen con un tamaño específico
 			PngExporter.Export(modelo, "plot", 600, 350, null);
 			Gdk.Pixbuf toRet = new Gdk.Pixbuf("plot");
 			return new Gtk.Image(toRet);

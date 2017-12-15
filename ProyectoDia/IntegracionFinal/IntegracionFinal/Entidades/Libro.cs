@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace IntegracionFinal
 {
-	public class Libro : Publicacion
+    /***
+     * Libro hereda de Publicacion los atributos.
+     */
+    public class Libro : Publicacion
 	{
+        /***
+         * Constructor específico para Libro
+         */
 		public Libro(string DOI, string titulo, string editorial, DateTime fechaPublicacion, string pagInicio, string pagFin, List<string> autores)
 		{
 			base.DOI = DOI;

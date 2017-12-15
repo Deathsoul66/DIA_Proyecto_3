@@ -4,6 +4,12 @@ using System.Linq;
 
 namespace IntegracionFinal
 {
+    /***
+     * Clase Publicacion
+     * Esta clase define los distintos atributos que tendrá una publicación, así como el Tipo de la misma
+     * Decidimos utilizar una factoría que mediante herencia
+     *
+     */
 	public class Publicacion
 	{
 		public string DOI { get; set; }
@@ -14,8 +20,9 @@ namespace IntegracionFinal
 		public string PagFin { get; set; }
 		public List<string> Autores { get; set; }
 
-		public Publicacion() { }
+        public Publicacion() { }
 
+        //Factory method encargado de crear publicaciones de cualquier tipo especificado
 		public static Publicacion Create(TipoPublicacion tipo, string DOI, string titulo, string editorial,
 		                                 DateTime fechaPublicacion, string pagInicio, string pagFin, List<string> autores,
 										 string nombre = null, string ciudad = null, string fecha = null)
@@ -34,6 +41,7 @@ namespace IntegracionFinal
 			}
 		}
 
+        //Return: Tipo de publicacion
 		public string getTipo()
 		{
 			if (this is Congreso) { return "Congreso"; }
@@ -42,6 +50,7 @@ namespace IntegracionFinal
 			else return "Publicacion";
 		}
 
+        //Return: Lista de autores separados por comas y salto de linea.
 		public string autoresToString()
 		{
 			string toRet = "";
@@ -58,25 +67,25 @@ namespace IntegracionFinal
 			}
 			return toRet;
 		}
-
+        //Si es un congreso, devuelve el nombre del congreso
 		public string getNombre()
 		{
 			if (this is Congreso) { return ((Congreso)this).nombre; }
 			else return "";
 		}
-
+        //Si es un congreso, devuelve la ciudad donde se ha celebrado
 		public string getCiudad()
 		{
 			if (this is Congreso) { return ((Congreso)this).ciudad; }
 			else return "";
 		}
-
+        //Si es un congreso, devuelve la fecha de celebracion del congreso
 		public string getFecha()
 		{
 			if (this is Congreso) { return ((Congreso)this).fecha; }
 			else return "";
 		}
-
+        //En caso de que no se haya especificado un DOI para una publicacion se genera uno al azar.
         private static string generarDOI()
         {
             Random random = new Random();

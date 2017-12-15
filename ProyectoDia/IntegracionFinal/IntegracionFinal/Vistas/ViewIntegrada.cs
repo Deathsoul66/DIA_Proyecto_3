@@ -100,8 +100,6 @@ namespace IntegracionFinal
             ///////////****************************************************************////////////// Menu_E_Section
            
             ///////////****************************************************************////////////// Filtro_I_Section
-            //VIEW FILTRO
-
             Autor = "";
             Anho = "";
             Tipo = "";
@@ -119,7 +117,6 @@ namespace IntegracionFinal
             Label labelTAutor = new Label("Autor");
             Entry entryAutor = new Entry();
             entryAutor.Changed += (o, e) => this.Autor = entryAutor.Text;
-
 
             pnlAutor.PackStart(labelTAutor, false, false, 5);
             pnlAutor.PackStart(entryAutor, false, false, 5);
@@ -154,12 +151,10 @@ namespace IntegracionFinal
             Button anhadir = new Button("Añadir Publicacion");
             anhadir.Clicked += AñadirPublicacion;
             anhadir.SetSizeRequest(110, 20);
-            //pnlButton3.PackStart(anhadir, false, false, 5);
 
             Button anhadir2 = new Button("Añadir Miembro");
             anhadir2.Clicked += AñadirMiembro;
             anhadir2.SetSizeRequest(100, 20);
-            //pnlButton4.PackStart(anhadir2, false, false, 5);
 
             pnlBuscador.PackStart(pnlAutor, false, false, 5);
             pnlBuscador.PackStart(pnlAnho, false, false, 5);
@@ -168,10 +163,6 @@ namespace IntegracionFinal
             pnlBuscador.PackStart(pnlButton2, false, false, 5);
             pnlBuscador.PackStart(pnlButton3, false, false, 5);
             pnlBuscador.PackStart(pnlButton4, false, false, 5);
-
-
-
-            //VBox vbox = new VBox(false, 8);
 
             this.sw = new ScrolledWindow();
             this.sw.ShadowType = ShadowType.EtchedIn;
@@ -188,14 +179,7 @@ namespace IntegracionFinal
 
             AddColumns();
 
-            //statusbar = new Statusbar();
-
-            //vbox.PackStart(statusbar, false, false, 0);
-
             ///////////****************************************************************////////////// Filtro_E_Section
-            //ADD ELEMENTS TO HORIZONTAL BOX
-            //TO-DO
-
             ///////////****************************************************************////////////// Miembros_I_Section
             hbox.PackStart(this.BuildTable(),false, false, 2);
             ///////////****************************************************************////////////// Miembros_E_Section

@@ -10,7 +10,7 @@ namespace IntegracionFinal
 {
 	public class XmlReader
 	{
-		
+		//Funcion para recuperar las publicaciones del archivo XML
 		public static ListaPublicacion leerPublicaciones(string filename)
 		{
 			List<Publicacion> publicaciones = new List<Publicacion>();
@@ -103,8 +103,8 @@ namespace IntegracionFinal
             toRet.listPub = publicaciones;
 			return toRet;
 		}
-
-		public static List<Miembro> leerMiembros(string filename)
+        //Funcion para recuperar los miemros del archivo XML
+        public static List<Miembro> leerMiembros(string filename)
 		{
 			List<Miembro> miembros = new List<Miembro>();
 
@@ -145,7 +145,7 @@ namespace IntegracionFinal
 			}
 			return miembros;
 		}
-
+        //Funcion para filtrar las publicaciones del archivo XML mediante una seria de parámetros
         public static ListaPublicacion filtrarListaPublicaciones(ListaPublicacion listaP, String nombre = "", String anho = "", String tipo = "")
         {
             ListaPublicacion toRet1 = listaP;
@@ -222,7 +222,7 @@ namespace IntegracionFinal
             return toRetFin;
 
         }
-
+        //Funcion para recuperar los miemros del archivo XML utilizando LINQ (Alternativa)
         public static List<Miembro> leerMiembrosLinq(string fileroute)
         {
             List<Miembro> toret = new List<Miembro>();

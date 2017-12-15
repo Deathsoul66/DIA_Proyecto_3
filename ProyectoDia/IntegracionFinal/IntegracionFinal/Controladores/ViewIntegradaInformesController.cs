@@ -18,6 +18,7 @@ namespace IntegracionFinal
         List<Publicacion> publicaciones = XmlReader.leerPublicaciones(PUBLICACIONES).listPub;
         List<Miembro> miembros = XmlReader.leerMiembros(MIEMBROS);
 
+        //Accion que se ejecuta al realizar clic en "Ver meritos miembro" del submenú de Informe
         void onBtnConsultarMerMiembroMesesClicked(object sender, EventArgs e)
         {
             Dialog askData = new Dialog("Estadísticas Anuales - Seleccionar miembro", this, DialogFlags.Modal, "Aceptar",
@@ -26,7 +27,7 @@ namespace IntegracionFinal
             List<string> miembros = new List<string>();
 
             foreach (Miembro m in listaM) {
-                miembros.Add(m.nombre[0] + "." + m.apellidos.Split(' ')[0]);
+                miembros.Add(m.nombre[0] + "." + m.apellidos.Split(' ')[0]); //Da el formato N.Martinez
             }
 
             ComboBoxEntry comboMiembros = new ComboBoxEntry(miembros.ToArray());
@@ -52,14 +53,14 @@ namespace IntegracionFinal
 
             if (response == (int)Gtk.ResponseType.Accept)
             {
-                if (comboMiembros.ActiveText != "" && cb.ActiveText != "")
+                if (comboMiembros.ActiveText != "" && cb.ActiveText != "")//Validar que no esten vacios
                 {
                     nombreAutorMiembro = comboMiembros.ActiveText;
                     anioSelect = cb.ActiveText;
                     askData.Destroy();
                     showConsultarMerMiembrosMeses(nombreAutorMiembro, anioSelect);
                 }
-                else
+                else //En caso de que estén vacíos, mostrar error
                 {
                     MessageDialog md = new MessageDialog(this,
                         DialogFlags.DestroyWithParent, MessageType.Warning,
@@ -74,7 +75,7 @@ namespace IntegracionFinal
                 askData.Destroy();
             }
         }
-
+        //Accion al realizar click en "Consultar" de la ventana principal o iniciar la venta principal
         void showConsultarMerMiembrosMeses(string miembro, string ano) {
 
             Dialog showMiembroMes = new Dialog("Estadísticas Anuales - " + miembro, this, DialogFlags.Modal, 
@@ -97,8 +98,6 @@ namespace IntegracionFinal
                     if (mie.nombre != "" && mie.apellidos != "")
                     {
                         int anio = Convert.ToInt32(ano.Trim());
-                        //plot = Grafico.GraficoBarrasExample();
-                        //plot = Grafico.GraficoPieExample();
                         plot = Grafico.merMiembroMes(miembro, meritosCientificos(mie, anio), anio);
                         showMiembroMes.VBox.PackStart(plot, false, false, 0);
                         showMiembroMes.ShowAll();
@@ -165,14 +164,13 @@ namespace IntegracionFinal
             }
             return meritos;
         }
-
+        //Funcion para generar la modal con los meritos para el departamento (En texto) de un año seleccionado.
         void onBtnConsultMerDepClicked(object sender, EventArgs e)
         {
             if (txtEntryAnioDep.ActiveText != "")
             {
                 try
                 {
-                    //clearOnViewChanged();
                     vistaMerDepartamento.Remove(plot);
                     vistaMerDepartamento.Visible = true;
                     int anio = Convert.ToInt32(txtEntryAnioDep.ActiveText.Trim());
@@ -200,6 +198,7 @@ namespace IntegracionFinal
             }
         }
 
+        //Accion al realizar click en "Consultar" de la ventana principal o iniciar la venta principal
         void btnConsultarMerAnioClicked(object sender, EventArgs e)
         {
             viewMeritos = new Dialog("Meritos Anuales departamento", this, DialogFlags.Modal,
@@ -230,6 +229,7 @@ namespace IntegracionFinal
             }
         }
 
+        //Accion al realizar al cambiar el año en la modal de informe anual (Texto)
         private void showMeritos(object sender, EventArgs e) { 
 
             if (txtEntryAnioTxt.ActiveText != "")
@@ -284,10 +284,10 @@ namespace IntegracionFinal
             return store;
         }
 
+        //Funcion para recoger todos los años de las publicaciones del departamento en un array. (Se emplea para rellenar el ComboBox)
         public string[] getAniosPublicaciones() {
 
             SortedSet<string> aniosRecuperados = new SortedSet<string>();
-
             foreach (Publicacion p in listaP.listPub){
                 foreach (string autor in p.Autores) {
                     foreach (Miembro m in listaM) {
